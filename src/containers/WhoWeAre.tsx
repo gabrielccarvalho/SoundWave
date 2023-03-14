@@ -13,7 +13,7 @@ const Background = styled.section`
 
   z-index: -1;
 
-  background: url('/assets/noise.webp') repeat, linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+  background: url('/assets/noise.webp') repeat, linear-gradient(83.21deg, #0076BE 0%, #48BF91 100%);
   background-blend-mode: overlay;
   -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%);
   mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%);
@@ -57,51 +57,27 @@ const MainContainer = styled.div`
   }
 `
 
-const CTA = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  column-gap: 1rem;
-
-  p {
-    max-width: 18rem;
-  }
-
-  @media (max-width: 414px) {
-    flex-direction: column;
-    row-gap: 1rem;
-    align-items: center;
-  }
-`
-
-const CallToAction = () => {
+const WhoWeAre = () => {
 
   return (
     <>
       <MainContainer>
         <Heading
-          name='Search anything you want'
+          name='Who we are'
           color='#fff'
           fontSize='72px'
-          lineHeight='72px'
+          lineHeight='0px'
         />
         <Text
-          name='SoundWave is a powerful podcast search engine that helps you find the content you want without any effort.'
+          name='Know more about soundwave and our mission'
           color='#fff'
           fontSize='24px'
-          lineHeight='28px'
+          lineHeight='24px'
         />
-        {/* <CTA>
-          <Button
-            name='Enroll now'
-            redirect=''
-          />
-        </CTA> */}
       </MainContainer>
       <Background />
     </>
   )
 }
 
-export default CallToAction
+export default WhoWeAre

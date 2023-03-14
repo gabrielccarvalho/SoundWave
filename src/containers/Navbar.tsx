@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 
 import { Dropdown, Heading, SocialMedia } from '@/components'
+import Link from 'next/link'
 
 const Container = styled.div`
   display: flex;
@@ -80,13 +81,14 @@ const Navbar = () => {
     <>
       <Container>
         <Section>
-          <Logo>
-            <Image src='/assets/logo.svg' width={24} height={24} alt='logo' />
-            <Heading name='SoundWave' />
-          </Logo>
+          <Link href='/'>
+            <Logo>
+              <Image src='/assets/logo.svg' width={24} height={24} alt='logo' />
+              <Heading name='SoundWave' />
+            </Logo>
+          </Link>
           <Dropdown name='Showcase' onClick={() => scrollSmoothlyToBottom('showcase')} />
-          <Dropdown name='Blog' />
-          <Dropdown name='About' />
+          <Dropdown name='About' location='/about' />
         </Section>
 
         <SocialMedia />

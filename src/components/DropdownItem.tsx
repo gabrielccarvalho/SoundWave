@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 
 import { Text } from './Heading'
 
 interface iDropdownItem {
   name: string
   onClick?: () => void
+  location?: string
 }
 
 const Container = styled.div`
@@ -29,9 +31,19 @@ const Container = styled.div`
   }
 `
 
-const DropdownItem = ({ name, onClick }: iDropdownItem) => {
+const DropdownItem = ({ name, onClick, location }: iDropdownItem) => {
+  const router = useRouter()
+
+  const handleRedirect = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (location) {
+      e.preventDefault()
+      router.push(location)
+    } else {
+      onClick && onClick()
+    }
+  }
   return (
-    <Container onClick={onClick}>
+    <Container onClick={handleRedirect}>
       <Text name={name} fontSize='16px' />
     </Container>
   )

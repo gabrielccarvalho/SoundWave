@@ -87,15 +87,15 @@ const Footer = () => {
         <Col>
           <Section>
             <Text name='Discover' color='#f2f6fa6b' fontSize='16px' font='Sono' />
-            <Link name='Blog' href='' font='Sono' />
-            <Link name='Showcase' href='' font='Sono' />
-            <Link name='Community' href='' font='Sono' />
+            <Link name='Community' href='' font='Sono' disabled />
+            <Link name='Showcase' href='' font='Sono' disabled />
+            <Link name='Podcasts' href='' font='Sono' disabled />
           </Section>
 
           <Section>
-            <Text name='Links' color='#f2f6fa6b' fontSize='16px' font='Sono'/>
-            <Link name='About' href='' font='Sono' />
-            <Link name='Careers' href='' font='Sono' />
+            <Text name='Company' color='#f2f6fa6b' fontSize='16px' font='Sono'/>
+            <Link name='About' href='/about' font='Sono' insideLink />
+            <Link name='Careers' href='' font='Sono' disabled />
           </Section>
         </Col>
         <SocialMedia size={34}/>
@@ -103,10 +103,10 @@ const Footer = () => {
       <Divider />
       <PolicyContainer>
         <Col>
-          <Link name='Terms of Service' href='' font='Sono' color='#f2f6fa6b' />
-          <Link name='Privacy Policy' href='' font='Sono' color='#f2f6fa6b' />
+          <Link name='Terms of Service' href='' font='Sono' color='#f2f6fa6b' disabled />
+          <Link name='Privacy Policy' href='' font='Sono' color='#f2f6fa6b' disabled />
         </Col>
-        <Text name='© 2023 SoundWave. All rights reserved.' color='#f2f6fa6b' fontSize='14px' font='Sono' />
+        <Text name='Copyright © 2023 SoundWave. All rights reserved.' color='#f2f6fa6b' fontSize='14px' font='Sono' />
       </PolicyContainer>
     </>
   )
