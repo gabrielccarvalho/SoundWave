@@ -1,6 +1,22 @@
-import '@/styles/globals.css'
+import React from 'react'
+import localFont from '@next/font/local'
+
 import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import GlobalStyle from '../styles/globalStyles'
+
+export const poppins = localFont({
+  src: '../../public/fonts/Poppins-Regular.ttf',
+  variable: '--font-poppins',
+})
+
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <main className={`${poppins.className} font-sans`}>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </main>
+  )
 }
+
+export default App
