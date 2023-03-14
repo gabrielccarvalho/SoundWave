@@ -65,9 +65,17 @@ const Logo = styled.div`
   flex-direction: row;
   column-gap: 0.5rem;
   align-items: center;
+
+  cursor: pointer;
 `
 
 const Navbar = () => {
+
+  const scrollSmoothlyToBottom = (id: string) => {
+    const element = document.getElementById(id)
+    element?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <>
       <Container>
@@ -75,8 +83,8 @@ const Navbar = () => {
           <Logo>
             <Image src='/assets/logo.svg' width={24} height={24} alt='logo' />
             <Heading name='SoundWave' />
-          </Logo> {/* Logo placeholder */}
-          <Dropdown name='Showcase' />
+          </Logo>
+          <Dropdown name='Showcase' onClick={() => scrollSmoothlyToBottom('showcase')} />
           <Dropdown name='Blog' />
           <Dropdown name='About' />
         </Section>

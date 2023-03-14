@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SEO } from '@/components';
-import { Navbar, CallToAction, Footer, Showcase } from '@/containers';
+import { Navbar, CallToAction, Footer, FirstVersion } from '@/containers';
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       />
       <Navbar />
       <CallToAction />
-      <Showcase />
+      <FirstVersion />
       <Footer />
     </>
   )

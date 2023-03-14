@@ -92,12 +92,12 @@ const CallToAction = () => {
           fontSize='24px'
           lineHeight='28px'
         />
-        <CTA>
+        {/* <CTA>
           <Button
             name='Enroll now'
-            redirect='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            redirect=''
           />
-        </CTA>
+        </CTA> */}
       </MainContainer>
       <Background />
     </>
