@@ -50,19 +50,11 @@ const Team = () => {
             name='Team'
             fontSize='58px'
           />
-        <Section>
-          <Member />
-          <Text
-            name='SoundWave was brought to life to help you learn and grow even faster, bringing podcasts content in a more accessible way.'
-            color='#fff'
-            fontSize='28px'
-            lineHeight='38px'
-            style={{
-              maxWidth: '500px',
-              marginBottom: '8rem',
-            }}
+          <Member
+            name='Gabriel Campos'
+            image='/assets/me.JPG'
+            role='CTO & Founder'
           />
-        </Section>
       </Container>
     </>
   )

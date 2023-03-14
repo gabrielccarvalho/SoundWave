@@ -73,7 +73,7 @@ const WhoWeAre = () => {
           lineHeight='0px'
         />
         <Text
-          name='Know more about soundwave and our mission'
+          name='Know more about SoundWave and our mission'
           color='#fff'
           fontSize='24px'
           lineHeight='24px'

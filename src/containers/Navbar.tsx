@@ -72,10 +72,10 @@ const Logo = styled.div`
 
 const Navbar = () => {
 
-  const scrollSmoothlyToBottom = (id: string) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: 'smooth' })
-  }
+  // const scrollSmoothlyToBottom = (id: string) => {
+  //   const element = document.getElementById(id)
+  //   element?.scrollIntoView({ behavior: 'smooth' })
+  // }
 
   return (
     <>
@@ -87,7 +87,7 @@ const Navbar = () => {
               <Heading name='SoundWave' />
             </Logo>
           </Link>
-          <Dropdown name='Showcase' onClick={() => scrollSmoothlyToBottom('showcase')} />
+          {/* <Dropdown name='Showcase' onClick={() => scrollSmoothlyToBottom('showcase')} /> */}
           <Dropdown name='About' location='/about' />
         </Section>
 

@@ -75,6 +75,7 @@ const PolicyContainer = styled.div`
 
     p {
       line-height: 20px;
+      font-size: 12px;
     }
   }
 `

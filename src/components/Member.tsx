@@ -3,6 +3,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { Heading, Text } from './Heading'
 
+interface iMember {
+  name: string
+  image: string
+  role: string
+}
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -18,18 +24,18 @@ const Container = styled.div`
   }
 `
 
-const Member = () => {
+const Member = ({ name, image, role }: iMember) => {
   return (
     <Container>
       <Image
-        src='/assets/me.JPG'
+        src={image}
         height={220}
         width={220}
         alt='CTO'
         style={{ borderRadius: '50%' }}
       />
-      <Heading name='Gabriel Campos' fontSize='32px' />
-      <Text name='CTO & Founder' fontSize='24px' font='Sono' color='#48BF91' />
+      <Heading name={name} fontSize='32px' />
+      <Text name={role} fontSize='24px' font='Sono' color='#48BF91' />
     </Container>
   )
 }
