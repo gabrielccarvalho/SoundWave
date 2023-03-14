@@ -15,7 +15,6 @@ const Container = styled.div`
   max-width: 1080px;
   margin: 0 auto !important;
   float: none !important;
-
 `
 
 const Showcase = () => {

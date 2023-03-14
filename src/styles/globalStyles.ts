@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     background-color: #17191E;
     color: #fff;
+    box-sizing: border-box;
 
     overflow-x: hidden;
 

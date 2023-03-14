@@ -22,6 +22,9 @@ const Container = styled.div`
     padding: 0 12px;
     column-gap: 0.2rem;
     height: 4rem;
+    background-color: #17191E;
+    position: fixed;
+    width: 100%;
 
     h1 {
       font-size: 14px;

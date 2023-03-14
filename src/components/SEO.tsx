@@ -31,7 +31,7 @@ export default function SEO({
       <meta httpEquiv='x-ua-compatible' content='IE=edge,chrome=1' />
       <meta name='MobileOptimized' content='320' />
       <meta name='HandheldFriendly' content='True' />
-      <meta name='theme-color' content='#ffffff' />
+      <meta name='theme-color' content='#17191E' />
       <meta name='msapplication-TileColor' content='#ffffff' />
       <meta name='referrer' content='no-referrer-when-downgrade' />
       <meta name='google' content='notranslate' />

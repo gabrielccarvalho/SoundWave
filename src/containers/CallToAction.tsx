@@ -17,6 +17,16 @@ const Background = styled.section`
   background-blend-mode: overlay;
   -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%);
   mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%);
+
+  @media (max-width: 414px) {
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+
+    -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 120%);
+
+  }
 `
 
 const MainContainer = styled.div`
