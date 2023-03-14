@@ -18,6 +18,8 @@ const Container = styled.div`
   float: none !important;
 
   @media (max-width: 414px) {
+    height: 50rem;
+    padding-top: 4rem;
 
     p {
       font-size: 16px;
@@ -33,6 +35,11 @@ const Section = styled.div`
   column-gap: 2rem;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 414px) {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
 `
 
 const Team = () => {

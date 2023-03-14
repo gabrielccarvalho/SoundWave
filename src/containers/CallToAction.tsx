@@ -24,6 +24,8 @@ const Background = styled.section`
     top: 0;
     left: 0;
 
+    height: 35rem;
+
     -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 120%);
 
   }
@@ -44,6 +46,7 @@ const MainContainer = styled.div`
 
   @media (max-width: 414px) {
     padding: 1rem;
+    height: 30rem;
     h1 {
       font-size: 42px;
       line-height: 42px;
