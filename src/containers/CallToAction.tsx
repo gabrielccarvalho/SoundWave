@@ -28,9 +28,23 @@ const MainContainer = styled.div`
   text-align: center;
   row-gap: 1rem;
 
-  max-width: 40rem; 
-  margin: 0 auto !important; 
-  float: none !important; 
+  max-width: 40rem;
+  margin: 0 auto !important;
+  float: none !important;
+
+  @media (max-width: 414px) {
+    padding: 1rem;
+    h1 {
+      font-size: 42px;
+      line-height: 42px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
 `
 
 const CTA = styled.div`
@@ -43,9 +57,16 @@ const CTA = styled.div`
   p {
     max-width: 18rem;
   }
+
+  @media (max-width: 414px) {
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+  }
 `
 
 const CallToAction = () => {
+
   return (
     <>
       <MainContainer>
@@ -62,13 +83,6 @@ const CallToAction = () => {
           lineHeight='28px'
         />
         <CTA>
-          <Text
-            name="Don't waste time, join us in the beta for FREE!"
-            color='#fff'
-            fontSize='22px'
-            lineHeight='24px'
-            bold
-          />
           <Button
             name='Enroll now'
             redirect='https://www.youtube.com/watch?v=dQw4w9WgXcQ'

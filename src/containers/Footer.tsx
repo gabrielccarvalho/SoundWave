@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { SocialMedia, Text } from '@/components'
+import { Link, SocialMedia, Text } from '@/components'
 
 const Container = styled.div`
   display: flex;
@@ -16,6 +16,20 @@ const Container = styled.div`
   max-width: 1080px; 
   margin: 0 auto !important; 
   float: none !important; 
+
+  @media (max-width: 414px) {
+    padding: 0 1rem;
+    column-gap: 1rem;
+
+    div {
+      padding: 0;
+    }
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
 `
 
 const Divider = styled.hr`
@@ -26,7 +40,7 @@ const Divider = styled.hr`
   border-top-width: 1px;
 `
 
-const Left = styled.div`
+const Section = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 0rem;
@@ -51,7 +65,18 @@ const PolicyContainer = styled.div`
 
   max-width: 1080px; 
   margin: 0 auto !important; 
-  float: none !important; 
+  float: none !important;
+
+  @media (max-width: 414px) {
+    flex-direction: column;
+    padding: 0;
+    margin: unset;
+    margin-bottom: 2rem;
+
+    p {
+      line-height: 20px;
+    }
+  }
 `
 
 const Footer = () => {
@@ -60,42 +85,26 @@ const Footer = () => {
       <Divider />
       <Container>
         <Col>
-          <Left>
+          <Section>
             <Text name='Discover' color='#f2f6fa6b' fontSize='16px' font='Sono' />
-            <a href='' target='_blank' rel='noreferrer'>
-              <Text name='Blog' fontSize='16px' font='Sono'/>
-            </a>
-            <a href='' target='_blank' rel='noreferrer'>
-              <Text name='Showcase' fontSize='16px' font='Sono'/>
-            </a>
-            <a href='' target='_blank' rel='noreferrer'>
-              <Text name='Community' fontSize='16px' font='Sono'/>
-            </a>
-          </Left>
-          <Left>
+            <Link name='Blog' href='' font='Sono' />
+            <Link name='Showcase' href='' font='Sono' />
+            <Link name='Community' href='' font='Sono' />
+          </Section>
+
+          <Section>
             <Text name='Links' color='#f2f6fa6b' fontSize='16px' font='Sono'/>
-            <a href='' target='_blank' rel='noreferrer'>
-              <Text name='About' fontSize='16px' font='Sono'/>
-            </a>
-            <a href='' target='_blank' rel='noreferrer'>
-              <Text name='Blog' fontSize='16px' font='Sono'/>
-            </a>
-            <a href='' target='_blank' rel='noreferrer'>
-              <Text name='Careers' fontSize='16px' font='Sono'/>
-            </a>
-          </Left>
+            <Link name='About' href='' font='Sono' />
+            <Link name='Careers' href='' font='Sono' />
+          </Section>
         </Col>
         <SocialMedia size={34}/>
       </Container>
       <Divider />
       <PolicyContainer>
         <Col>
-          <a href='' target='_blank' rel='noreferrer'>
-            <Text name='Terms of Service' color='#f2f6fa6b' fontSize='14px' font='Sono' />
-          </a>
-          <a href='' target='_blank' rel='noreferrer'>
-            <Text name='Privacy Policy' color='#f2f6fa6b' fontSize='14px' font='Sono' />
-          </a>
+          <Link name='Terms of Service' href='' font='Sono' color='#f2f6fa6b' />
+          <Link name='Privacy Policy' href='' font='Sono' color='#f2f6fa6b' />
         </Col>
         <Text name='© 2023 SoundWave. All rights reserved.' color='#f2f6fa6b' fontSize='14px' font='Sono' />
       </PolicyContainer>

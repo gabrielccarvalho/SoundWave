@@ -1,8 +1,8 @@
 import React from 'react'
+import Image from 'next/image'
 import styled from 'styled-components'
 
 import { Dropdown, Heading, SocialMedia } from '@/components'
-import Image from 'next/image'
 
 const Container = styled.div`
   display: flex;
@@ -14,9 +14,32 @@ const Container = styled.div`
   height: 5rem;
   box-sizing: border-box;
 
-  max-width: 1080px; 
-    margin: 0 auto !important; 
-    float: none !important; 
+  max-width: 1080px;
+  margin: 0 auto !important;
+  float: none !important;
+
+  @media (max-width: 414px) {
+    padding: 0 12px;
+    column-gap: 0.2rem;
+    height: 4rem;
+
+    h1 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    div {
+      padding: 0;
+    }
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
 `
 
 const Divider = styled.hr`
@@ -27,7 +50,7 @@ const Divider = styled.hr`
   border-top-width: 1px;
 `
 
-const Left = styled.div`
+const Section = styled.div`
   display: flex;
   flex-direction: row;
   column-gap: 1rem;
@@ -45,7 +68,7 @@ const Navbar = () => {
   return (
     <>
       <Container>
-        <Left>
+        <Section>
           <Logo>
             <Image src='/assets/logo.svg' width={24} height={24} alt='logo' />
             <Heading name='SoundWave' />
@@ -53,7 +76,7 @@ const Navbar = () => {
           <Dropdown name='Showcase' />
           <Dropdown name='Blog' />
           <Dropdown name='About' />
-        </Left>
+        </Section>
 
         <SocialMedia />
       </Container>
