@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Button, Heading, Text } from '@/components'
+import { Heading, Text } from '@/components'
+import { colors } from '@/utils/baseStyles'
 
 const Background = styled.section`
   position: absolute;
@@ -85,13 +86,13 @@ const CallToAction = () => {
       <MainContainer>
         <Heading
           name='Search anything you want'
-          color='#fff'
+          color={colors.primary.text}
           fontSize='72px'
           lineHeight='72px'
         />
         <Text
           name='SoundWave is a powerful podcast search engine that helps you find the content you want without any effort.'
-          color='#fff'
+          color={colors.primary.text}
           fontSize='24px'
           lineHeight='28px'
         />

@@ -1,11 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
 
+import { colors } from '@/utils/baseStyles'
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background-color: #17191E;
-    color: #fff;
+    background-color: ${colors.primary.background};
+    color: ${colors.primary.text};
     box-sizing: border-box;
 
     overflow-x: hidden;

@@ -1,9 +1,10 @@
 import React from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
 
 import { Dropdown, Heading, SocialMedia } from '@/components'
-import Link from 'next/link'
+import { colors } from '@/utils/baseStyles'
 
 const Container = styled.div`
   display: flex;
@@ -23,7 +24,7 @@ const Container = styled.div`
     padding: 0 12px;
     column-gap: 0.2rem;
     height: 4rem;
-    background-color: #17191E;
+    background-color: ${colors.primary.background};
     position: fixed;
     width: 100%;
 

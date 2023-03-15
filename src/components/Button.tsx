@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Text } from './Heading'
 
+import { colors } from '@/utils/baseStyles'
+
 interface iButton {
   name: string
   onClick?: React.MouseEventHandler<HTMLButtonElement>
@@ -9,7 +11,7 @@ interface iButton {
 }
 
 const Component = styled.button`
-  background-color: #fff;
+  background-color: ${colors.primary.text};
   border-radius: 50px;
   padding: 0.2rem 1rem;
 
@@ -28,12 +30,12 @@ const Button = ({ name, onClick, redirect }: iButton) => {
       {redirect ? (
         <a href={redirect} target='_blank'>
           <Component onClick={onClick}>
-            <Text name={name} color='#3245ff' fontSize='16px' />
+            <Text name={name} color={colors.primary.highlight.blue} fontSize='16px' />
           </Component>
         </a>
       ) : (
         <Component onClick={onClick}>
-          <Text name={name} color='#3245ff' fontSize='16px' />
+          <Text name={name} color={colors.primary.highlight.blue} fontSize='16px' />
         </Component>
       )}
     </>

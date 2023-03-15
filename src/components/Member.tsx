@@ -3,6 +3,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Heading, Text } from './Heading'
 
+import { colors } from '@/utils/baseStyles'
+
 interface iMember {
   name: string
   image: string
@@ -35,7 +37,7 @@ const Member = ({ name, image, role }: iMember) => {
         style={{ borderRadius: '50%' }}
       />
       <Heading name={name} fontSize='32px' />
-      <Text name={role} fontSize='24px' font='Sono' color='#48BF91' />
+      <Text name={role} fontSize='24px' font='Sono' color={colors.secondary.highlight.green} />
     </Container>
   )
 }

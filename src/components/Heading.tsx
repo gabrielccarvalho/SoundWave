@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import localFont from '@next/font/local'
 
+import { colors } from '@/utils/baseStyles'
+
 export const poppins = localFont({
   src: '../../public/fonts/Poppins-Regular.ttf',
   variable: '--font-poppins',
@@ -35,7 +37,7 @@ const TextComponent = styled.p<{ fontSize: string, color: string, lineHeight: st
   font-weight: ${props => props.bold ? 'bold' : 'normal'};
 `
 
-const Heading = ({ name, fontSize = '28px', color = '#fff', lineHeight = '28px', bold = false, font='Poppins', style }: iHeading) => {
+const Heading = ({ name, fontSize = '28px', color = colors.primary.text, lineHeight = '28px', bold = false, font='Poppins', style }: iHeading) => {
   return (
     <Component
       fontSize={fontSize}
@@ -50,7 +52,7 @@ const Heading = ({ name, fontSize = '28px', color = '#fff', lineHeight = '28px',
   )
 }
 
-const Text = ({ name, fontSize = '12px', color = '#fff', lineHeight = '12px', bold = false, font='Poppins', style }: iHeading) => {
+const Text = ({ name, fontSize = '12px', color = colors.primary.text, lineHeight = '12px', bold = false, font='Poppins', style }: iHeading) => {
   return (
     <TextComponent
       fontSize={fontSize}

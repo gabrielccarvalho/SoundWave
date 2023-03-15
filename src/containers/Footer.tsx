@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Link, SocialMedia, Text } from '@/components'
+import { colors } from '@/utils/baseStyles'
 
 const Container = styled.div`
   display: flex;
@@ -87,14 +88,14 @@ const Footer = () => {
       <Container>
         <Col>
           <Section>
-            <Text name='Discover' color='#f2f6fa6b' fontSize='16px' font='Sono' />
+            <Text name='Discover' color={colors.secondary.text} fontSize='16px' font='Sono' />
             <Link name='Community' href='' font='Sono' disabled />
             <Link name='Showcase' href='' font='Sono' disabled />
             <Link name='Podcasts' href='' font='Sono' disabled />
           </Section>
 
           <Section>
-            <Text name='Company' color='#f2f6fa6b' fontSize='16px' font='Sono'/>
+            <Text name='Company' color={colors.secondary.text} fontSize='16px' font='Sono'/>
             <Link name='About' href='/about' font='Sono' insideLink />
             <Link name='Careers' href='' font='Sono' disabled />
           </Section>
@@ -104,10 +105,10 @@ const Footer = () => {
       <Divider />
       <PolicyContainer>
         <Col>
-          <Link name='Terms of Service' href='' font='Sono' color='#f2f6fa6b' disabled />
-          <Link name='Privacy Policy' href='' font='Sono' color='#f2f6fa6b' disabled />
+          <Link name='Terms of Service' href='' font='Sono' color={colors.secondary.text} disabled />
+          <Link name='Privacy Policy' href='' font='Sono' color={colors.secondary.text} disabled />
         </Col>
-        <Text name='Copyright © 2023 SoundWave. All rights reserved.' color='#f2f6fa6b' fontSize='14px' font='Sono' />
+        <Text name='Copyright © 2023 SoundWave. All rights reserved.' color={colors.secondary.text} fontSize='14px' font='Sono' />
       </PolicyContainer>
     </>
   )

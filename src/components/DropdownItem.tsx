@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useRouter } from 'next/router'
 
 import { Text } from './Heading'
+import { colors } from '@/utils/baseStyles'
 
 interface iDropdownItem {
   name: string
@@ -26,7 +27,7 @@ const Container = styled.div`
       -webkit-transition: color 0.15s; /* For Safari 3.0 to 6.0 */
       transition: color 0.15s; /* For modern browsers */
 
-      color: #f2f6fa78;
+      color: ${colors.secondary.text};
     }
   }
 `

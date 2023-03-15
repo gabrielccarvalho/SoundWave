@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { Heading, Text } from './Heading'
+import { colors } from '@/utils/baseStyles'
 
 interface iTimeBox {
   time: number
@@ -38,8 +40,8 @@ const TimeBox = ({ time, und }: iTimeBox) => {
 
   return (
     <Container>
-      <Heading name={`${time}`} color='#8973FD' fontSize='108px' font='Sono' />
-      <Text name={und.toUpperCase()} color='#798EB0' fontSize='24px' font='Sono' />
+      <Heading name={`${time}`} color={colors.primary.highlight.purple} fontSize='108px' font='Sono' />
+      <Text name={und.toUpperCase()} color={colors.secondary.highlight.gray} fontSize='24px' font='Sono' />
     </Container>
   )
 }

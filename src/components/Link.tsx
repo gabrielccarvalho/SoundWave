@@ -1,8 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
 import Link from 'next/link'
 
 import { Text } from './Heading'
+import { colors } from '@/utils/baseStyles'
 
 interface iLink {
   name: string
@@ -14,7 +14,7 @@ interface iLink {
   insideLink?: boolean
 }
 
-const LinkComponent = ({ href, name, fontSize = '16px', font = 'Poppins', color = '#fff', disabled = false, insideLink = false }: iLink) => {
+const LinkComponent = ({ href, name, fontSize = '16px', font = 'Poppins', color = colors.primary.text, disabled = false, insideLink = false }: iLink) => {
   return (
     <>
       {disabled ? (

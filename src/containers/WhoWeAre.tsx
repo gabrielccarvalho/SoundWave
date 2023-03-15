@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Button, Heading, Text } from '@/components'
+import { Heading, Text } from '@/components'
+import { colors } from '@/utils/baseStyles'
 
 const Background = styled.section`
   position: absolute;
@@ -68,13 +69,13 @@ const WhoWeAre = () => {
       <MainContainer>
         <Heading
           name='Who we are'
-          color='#fff'
+          color={colors.primary.text}
           fontSize='72px'
           lineHeight='0px'
         />
         <Text
           name='Know more about SoundWave and our mission'
-          color='#fff'
+          color={colors.primary.text}
           fontSize='24px'
           lineHeight='24px'
         />
