@@ -39,9 +39,20 @@ export default function SEO({
 
       {/* Facebook */}
       {pageImage && <meta property='og:image' content={pageImage} />}
+      <meta property='og:title' content={pageTitle} />
+      <meta property='og:description' content={description} />
+      <meta property='og:site_name' content='SoundWave' />
+      <meta property='og:type' content='website' />
+      <meta property='og:url' content={process.env.NEXT_PUBLIC_SITE_URL} />
 
       {/* Twitter */}
       {pageImage && <meta property='twitter:image' content={pageImage} />}
+      <meta property='twitter:card' content='summary_large_image' />
+      <meta property='twitter:title' content={pageTitle} />
+      <meta property='twitter:description' content={description} />
+      <meta property='twitter:site' content='@soundwave_br' />
+      <meta property='twitter:creator' content='@soundwave_br' />
+
     </Head>
   )
 }
