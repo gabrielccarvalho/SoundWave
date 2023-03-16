@@ -31,13 +31,13 @@ const Member = ({ name, image, role }: iMember) => {
     <Container>
       <Image
         src={image}
-        height={220}
-        width={220}
+        height={200}
+        width={200}
         alt='CTO'
         style={{ borderRadius: '50%' }}
       />
-      <Heading name={name} fontSize='32px' />
-      <Text name={role} fontSize='24px' font='Sono' color={colors.secondary.highlight.green} />
+      <Heading name={name} fontSize='28px' />
+      <Text name={role} fontSize='22px' font='Sono' color={colors.secondary.highlight.green} />
     </Container>
   )
 }

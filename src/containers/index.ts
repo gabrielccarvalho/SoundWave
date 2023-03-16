@@ -1,6 +1,6 @@
 export { default as Navbar } from './Navbar'
+export { default as Jumbotron } from './Jumbotron'
 export { default as Footer } from './Footer'
-export { default as CallToAction } from './CallToAction'
 export { default as FirstVersion } from './FirstVersion'
-export { default as WhoWeAre } from './WhoWeAre'
 export { default as Team } from './Team'
+export { default as Podcasts } from './Podcasts'

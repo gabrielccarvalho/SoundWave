@@ -89,9 +89,9 @@ const Footer = () => {
         <Col>
           <Section>
             <Text name='Discover' color={colors.secondary.text} fontSize='16px' font='Sono' />
+            <Link name='Podcasts' href='/podcasts' font='Sono' insideLink />
             <Link name='Community' href='' font='Sono' disabled />
             <Link name='Showcase' href='' font='Sono' disabled />
-            <Link name='Podcasts' href='' font='Sono' disabled />
           </Section>
 
           <Section>

@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { SEO } from '@/components';
-import { Navbar, CallToAction, Footer, FirstVersion } from '@/containers';
+import { Navbar, Footer, FirstVersion, Jumbotron } from '@/containers';
+import { colors } from '@/utils/baseStyles'
 
 const Home = () => {
   return (
@@ -12,7 +13,12 @@ const Home = () => {
         image='assets/home-meta.png'
       />
       <Navbar />
-      <CallToAction />
+      <Jumbotron
+        primaryColor={colors.primary.highlight.blue}
+        secondaryColor={colors.primary.highlight.purple}
+        title='Search anything you want'
+        subtitle='SoundWave is a powerful podcast search engine that helps you find the content you want without any effort.'
+        />
       <FirstVersion />
       <Footer />
     </>

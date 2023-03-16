@@ -1,10 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Heading, Text } from '@/components'
+import { Heading, Text, Button } from '@/components'
 import { colors } from '@/utils/baseStyles'
 
-const Background = styled.section`
+interface iJumbotron {
+  primaryColor: string,
+  secondaryColor: string,
+  title: string,
+  subtitle: string,
+  extraSubtitle?: string,
+  cta?: string,
+  redirect?: string
+}
+
+const Background = styled.section<{primary: string, secondary: string}>`
   position: absolute;
   top: 0;
   bottom: 10%;
@@ -14,7 +24,7 @@ const Background = styled.section`
 
   z-index: -1;
 
-  background: url('/assets/noise.webp') repeat, linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+  background: url('/assets/noise.webp') repeat, linear-gradient(83.21deg, ${props => props.primary} 0%, ${props => props.secondary} 100%);
   background-blend-mode: overlay;
   -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%);
   mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 70%);
@@ -79,33 +89,43 @@ const CTA = styled.div`
   }
 `
 
-const CallToAction = () => {
+const Jumbotron = ({ primaryColor, secondaryColor, title, subtitle, extraSubtitle, cta, redirect }: iJumbotron) => {
 
   return (
     <>
       <MainContainer>
         <Heading
-          name='Search anything you want'
+          name={title}
           color={colors.primary.text}
           fontSize='72px'
           lineHeight='72px'
         />
         <Text
-          name='SoundWave is a powerful podcast search engine that helps you find the content you want without any effort.'
+          name={subtitle}
           color={colors.primary.text}
           fontSize='24px'
           lineHeight='28px'
         />
-        {/* <CTA>
+        {extraSubtitle && (
+          <Text
+          name={extraSubtitle}
+          color={colors.primary.text}
+          fontSize='24px'
+          lineHeight='28px'
+          style={{ margin: 0 }}
+        />
+        )}
+      {cta && redirect && 
+        (<CTA>
           <Button
-            name='Enroll now'
-            redirect=''
+            name={cta}
+            redirect={redirect}
           />
-        </CTA> */}
+        </CTA>)}
       </MainContainer>
-      <Background />
+      <Background primary={primaryColor} secondary={secondaryColor} />
     </>
   )
 }
 
-export default CallToAction
+export default Jumbotron

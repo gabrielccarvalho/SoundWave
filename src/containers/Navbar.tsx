@@ -89,6 +89,7 @@ const Navbar = () => {
             </Logo>
           </Link>
           {/* <Dropdown name='Showcase' onClick={() => scrollSmoothlyToBottom('showcase')} /> */}
+          <Dropdown name='Podcasts' location='/podcasts' />
           <Dropdown name='About' location='/about' />
         </Section>
 

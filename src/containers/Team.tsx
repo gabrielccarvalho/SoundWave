@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 10rem 2rem;
+  padding: 8rem 2rem;
   box-sizing: border-box;
   row-gap: 4rem;
 
@@ -48,7 +48,7 @@ const Team = () => {
       <Container>
           <Heading
             name='Team'
-            fontSize='58px'
+            fontSize='45px'
           />
           <Member
             name='Gabriel Campos'

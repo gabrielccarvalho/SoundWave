@@ -6,6 +6,8 @@ export const colors = {
       blue: '#3245ff',
       purple: '#8973FD',
       pink: '#bc52ee',
+      orange: '#ff6e00',
+      red: '#ff0000',
     },
   },
   secondary: {
