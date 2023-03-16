@@ -14,6 +14,13 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 8rem 2rem;
+
+  @media (max-width: 414px) {
+    p {
+      text-align: center;
+      line-height: 1.5rem;
+    }
+  }
 `
 
 const Wrapper = styled.div`
