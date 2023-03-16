@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Button, Heading, Text } from '@/components'
+import { Button, Heading, Text, Input } from '@/components'
 import { colors } from '@/utils/baseStyles'
 
 interface iPodcasts {
@@ -16,6 +16,8 @@ const Container = styled.div`
   padding: 8rem 2rem;
 
   @media (max-width: 414px) {
+
+    padding: 8rem 0.5rem;
     p {
       text-align: center;
       line-height: 1.5rem;
@@ -56,9 +58,9 @@ const Podcasts = ({ podcastList }: iPodcasts) => {
           />
 
           <Wrapper>
-            <Text name='Want to see your podcast here?' fontSize='22px' color={colors.primary.text} />
-            <Text name='Send us a message!' fontSize='22px' color={colors.primary.text} />
-            <Button name='Contact us' redirect='mailto:contact@soundwave.com.br' />
+            <Text name="Didn't your podcast here?" fontSize='22px' color={colors.primary.text} />
+            {/* <Text name='Send us your podcast suggestion!' fontSize='22px' color={colors.primary.text} style={{ marginBottom: '5rem' }} /> */}
+            <Input placeholder='Channel url' label='Send us your suggestion!' submit='Send request' />
           </Wrapper>
         </>
       )}
