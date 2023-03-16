@@ -20,11 +20,14 @@ const Container = styled.div`
 const SocialMedia = ({ size = 24 }: iSocialMedia) => {
   return (
     <Container>
+      <a href='https://twitter.com/soundwave_br' target='_blank' rel='noreferrer'>
+        <Image src='/icons/twitter.png' width={size} height={size} alt='twitter logo' />
+      </a>
       <a href='https://github.com/gabrielccarvalho' target='_blank' rel='noreferrer'>
         <Image src='/icons/github.png' width={size} height={size} alt='github logo' />
       </a>
       <a href='https://www.linkedin.com/in/gabriel-campos-b7618418a/' target='_blank' rel='noreferrer'>
-        <Image src='/icons/linkedin.png' width={size + 6} height={size + 6} alt='linkedin logo' />
+        <Image src='/icons/linkedin.png' width={size} height={size} alt='linkedin logo' />
       </a>
     </Container>
   )

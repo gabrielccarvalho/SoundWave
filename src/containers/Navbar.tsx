@@ -10,7 +10,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  column-gap: 1rem;
+  row-gap: 1rem;
   align-items: center;
   padding: 0 2rem;
   height: 5rem;
@@ -92,7 +92,7 @@ const Navbar = () => {
           <Dropdown name='About' location='/about' />
         </Section>
 
-        <SocialMedia />
+        <SocialMedia size={28} />
       </Container>
       <Divider />
     </>
