@@ -8,10 +8,13 @@ interface iButton {
   name: string
   onClick?: React.MouseEventHandler<HTMLButtonElement>
   redirect?: string
+  color?: string
+  bgColor?: string
 }
 
-const Component = styled.button`
-  background-color: ${colors.primary.text};
+const Component = styled.button<{bgColor: string}>`
+  background-color: ${props => props.bgColor};
+  border: 1px solid ${colors.primary.background};
   border-radius: 50px;
   padding: 0.2rem 1rem;
 
@@ -24,18 +27,18 @@ const Component = styled.button`
   }
 `
 
-const Button = ({ name, onClick, redirect }: iButton) => {
+const Button = ({ name, onClick, redirect, color = colors.primary.highlight.blue, bgColor = colors.primary.text }: iButton) => {
   return (
     <>
       {redirect ? (
         <a href={redirect} target='_blank'>
-          <Component onClick={onClick}>
-            <Text name={name} color={colors.primary.highlight.blue} fontSize='16px' />
+          <Component onClick={onClick} bgColor={bgColor}>
+            <Text name={name} color={color} fontSize='16px' />
           </Component>
         </a>
       ) : (
-        <Component onClick={onClick}>
-          <Text name={name} color={colors.primary.highlight.blue} fontSize='16px' />
+        <Component onClick={onClick} bgColor={bgColor}>
+          <Text name={name} color={color} fontSize='16px' />
         </Component>
       )}
     </>

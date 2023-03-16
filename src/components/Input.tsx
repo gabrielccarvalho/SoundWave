@@ -46,9 +46,20 @@ const Input = ({ label, placeholder, submit }: iInput) => {
   return (
     <Container>
       <Text name={label} fontSize='22px' />
-      <InputField type='text' id='text' placeholder={placeholder} value={value} onChange={e => setValue(e.currentTarget.value)} />
+      <InputField
+        type='text'
+        id='text'
+        placeholder={placeholder}
+        value={value}
+        onChange={e => setValue(e.currentTarget.value)}
+      />
       {submit && (
-        <Button name={submit} redirect={`mailto:contact@soundwave.com.br?subject=Podcast suggestion&body=${value}`}/>
+        <Button
+          name={submit}
+          redirect={`mailto:contact@soundwave.com.br?subject=Podcast suggestion&body=${value}`}
+          color={colors.primary.background}
+          bgColor={colors.primary.highlight.orange}
+        />
       )}
     </Container>
   )
