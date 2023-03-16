@@ -33,6 +33,7 @@ export default function SEO({
       <meta name='MobileOptimized' content='320' />
       <meta name='HandheldFriendly' content='True' />
       <meta name='theme-color' content={colors.primary.background} />
+      <meta name='color-scheme' content='dark' />
       <meta name='msapplication-TileColor' content={colors.primary.text} />
       <meta name='referrer' content='no-referrer-when-downgrade' />
       <meta name='google' content='notranslate' />
