@@ -48,7 +48,7 @@ export default function SEO({
 
       {/* Twitter */}
       {pageImage && <meta property='twitter:image' content={pageImage} />}
-      <meta property='twitter:card' content='summary_large_image' />
+      <meta property='twitter:card' content='summary' />
       <meta property='twitter:title' content={pageTitle} />
       <meta property='twitter:description' content={description} />
       <meta property='twitter:site' content='@soundwave_br' />

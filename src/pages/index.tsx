@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <SEO
         title='Welcome to the future'
-        description='Search anything you want with SoundWave, the best podcast search engine in the world.'
+        description='Search smarter, not harder.'
         image='assets/home-meta.png'
       />
       <Navbar />
