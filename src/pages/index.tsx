@@ -11,6 +11,7 @@ const Home = () => {
         title='Welcome to the future'
         description='Search smarter, not harder.'
         image='assets/home-meta.png'
+        twitterImage='assets/twitter_img.png'
       />
       <Navbar />
       <Jumbotron

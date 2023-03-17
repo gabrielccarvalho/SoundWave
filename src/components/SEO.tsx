@@ -7,6 +7,7 @@ interface SEOProps {
   title: string
   description: string
   image?: string
+  twitterImage?: string
   shouldExcludeTitleSuffix?: boolean
   shouldIndexPage?: boolean
 }
@@ -15,11 +16,13 @@ export default function SEO({
   title,
   description,
   image,
+  twitterImage,
   shouldExcludeTitleSuffix = false,
   shouldIndexPage = true,
 }: SEOProps) {
   const pageTitle = `${title} ${shouldExcludeTitleSuffix ? '' : '| SoundWave'}`
   const pageImage = image ? `${process.env.NEXT_PUBLIC_SITE_URL}/${image}` : undefined
+  const twitterImg = twitterImage ? `${process.env.NEXT_PUBLIC_SITE_URL}/${twitterImage}` : undefined
 
   return (
     <Head>
@@ -39,20 +42,19 @@ export default function SEO({
       <meta name='google' content='notranslate' />
 
       {/* Facebook */}
-      {pageImage && <meta property='og:image' content={pageImage} />}
-      <meta property='og:title' content={pageTitle} />
-      <meta property='og:description' content={description} />
-      <meta property='og:site_name' content='SoundWave' />
-      <meta property='og:type' content='website' />
-      <meta property='og:url' content={process.env.NEXT_PUBLIC_SITE_URL} />
+      {pageImage && <meta name='og:image' content={pageImage} />}
+      <meta name='og:title' content={pageTitle} />
+      <meta name='og:description' content={description} />
+      <meta name='og:site_name' content='SoundWave' />
+      <meta name='og:type' content='website' />
+      <meta name='og:url' content={process.env.NEXT_PUBLIC_SITE_URL} />
 
       {/* Twitter */}
-      {pageImage && <meta property='twitter:image' content={pageImage} />}
-      <meta property='twitter:card' content='summary' />
-      <meta property='twitter:title' content={pageTitle} />
-      <meta property='twitter:description' content={description} />
-      <meta property='twitter:site' content='@soundwave_br' />
-      <meta property='twitter:creator' content='@soundwave_br' />
+      {twitterImg && <meta name='twitter:image:src' content={twitterImg} />}
+      <meta name='twitter:card' content='summary' />
+      <meta name='twitter:title' content={pageTitle} />
+      <meta name='twitter:description' content={description} />
+      <meta name='twitter:site' content='@soundwave_br' />
 
     </Head>
   )
