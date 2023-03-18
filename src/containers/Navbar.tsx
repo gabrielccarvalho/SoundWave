@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
 
-import { Dropdown, Heading, SocialMedia } from '@/components'
+import { Dropdown, Heading, SocialMedia, AuthButton } from '@/components'
 import { colors } from '@/utils/baseStyles'
 
 const Container = styled.div`
@@ -93,7 +93,10 @@ const Navbar = () => {
           <Dropdown name='About' location='/about' />
         </Section>
 
-        <SocialMedia size={28} />
+        <Section>
+          {/* <SocialMedia size={28} /> */}
+          <AuthButton />
+        </Section>
       </Container>
       <Divider />
     </>

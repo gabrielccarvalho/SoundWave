@@ -2,6 +2,7 @@ import React from 'react'
 import localFont from '@next/font/local'
 
 import type { AppProps } from 'next/app'
+import { SessionProvider } from "next-auth/react";
 
 import GlobalStyle from '../styles/globalStyles'
 
@@ -10,12 +11,14 @@ export const poppins = localFont({
   variable: '--font-poppins',
 })
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
-    <main className={`${poppins.className} font-sans`}>
-      <GlobalStyle />
-      <Component {...pageProps} />
-    </main>
+    <SessionProvider session={session}>
+      <main className={`${poppins.className} font-sans`}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </main>
+    </SessionProvider>
   )
 }
 
