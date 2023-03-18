@@ -11,7 +11,6 @@ const About = () => {
         title='Who we are?'
         description='The people behind SoundWave'
         image='assets/twitter_img.png'
-        twitterImage='assets/twitter_img.png'
       />
       <Navbar />
       <Jumbotron

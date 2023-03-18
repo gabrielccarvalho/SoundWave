@@ -11,7 +11,6 @@ const About = () => {
         title='Supported Podcasts'
         description='Want to see your podcast here? Contact us!'
         image='assets/twitter_img.png'
-        twitterImage='assets/twitter_img.png'
       />
       <Navbar />
       <Jumbotron

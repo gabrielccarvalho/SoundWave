@@ -10,7 +10,7 @@ const Home = () => {
       <SEO
         title='Welcome to the future'
         description='Search smarter, not harder.'
-        image='assets/metaImg.png'
+        image='assets/twitter_img.png'
       />
       <Navbar />
       <Jumbotron
