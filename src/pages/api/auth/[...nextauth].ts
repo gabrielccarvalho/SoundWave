@@ -2,7 +2,9 @@ import NextAuth from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 import GithubProvider from "next-auth/providers/github"
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
-import prisma from "../../../../prisma/prisma";
+import { PrismaClient } from "@prisma/client"
+
+const prisma = new PrismaClient();
 
 export default NextAuth({
   adapter: PrismaAdapter(prisma),
@@ -24,11 +26,14 @@ export default NextAuth({
     }),
   ],
   callbacks: {
-    async session({ session, token, user }) {
-      if (session.user) {
-        session.user.id = user.id;
-      }
-      return session;
-    },
+    async session({ session, user }) {
+			return Promise.resolve({
+				...session,
+				user: {
+					...session.user,
+					id: user.id,
+				},
+			});
+		},
   },
 });
