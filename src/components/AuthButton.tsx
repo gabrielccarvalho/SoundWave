@@ -60,7 +60,7 @@ const AuthBtn = () => {
   if (status === "unauthenticated") {
     return (
       <div>
-        <Button name='Login' onClick={() => signIn()} type='login' color={colors.primary.text} bgColor='transparent' />
+        <Button name='Login' onClick={() => signIn('google', { callbackUrl: process.env.NEXTAUTH_URL })} type='login' color={colors.primary.text} bgColor='transparent' />
       </div>
     );
   }
