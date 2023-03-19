@@ -79,10 +79,21 @@ const MainContainer = styled.div`
   }
 `
 
+const Wrapper = styled.div`
+  flex: 1;
+  height: calc(100vh - 40rem);
+  flex-direction: column;
+
+
+  @media (max-width: 414px) {
+    height: calc(100vh - 20rem);
+  }
+`
+
 const Form = ({}: iForm) => {
 
   return (
-    <>
+    <Wrapper>
       <MainContainer>
         <Heading
           name='Login'
@@ -105,7 +116,7 @@ const Form = ({}: iForm) => {
         />
       </MainContainer>
       <Background primary={colors.highlight.lightBlue} secondary={colors.highlight.blue} />
-    </>
+    </Wrapper>
   )
 }
 
