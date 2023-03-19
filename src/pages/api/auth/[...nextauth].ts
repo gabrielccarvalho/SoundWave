@@ -12,13 +12,6 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-      authorization: {
-        params: {
-          prompt: "consent",
-          access_type: "offline",
-          response_type: "code"
-        }
-      }
     }),
     GithubProvider({
       clientId: process.env.GITHUB_ID as string,
@@ -31,9 +24,10 @@ export default NextAuth({
 				...session,
 				user: {
 					...session.user,
-					id: user.id,
+					id: session.user.id,
 				},
 			});
 		},
   },
+  secret: process.env.NEXTAUTH_SECRET as string,
 });
