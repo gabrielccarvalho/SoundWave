@@ -14,8 +14,8 @@ const Home = () => {
       />
       <Navbar />
       <Jumbotron
-        primaryColor={colors.primary.highlight.blue}
-        secondaryColor={colors.primary.highlight.purple}
+        primaryColor={colors.highlight.blue}
+        secondaryColor={colors.highlight.purple}
         title='Search smarter, not harder'
         subtitle='SoundWave is a powerful podcast search engine that helps you find the content you want without any effort.'
         />

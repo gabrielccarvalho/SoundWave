@@ -40,8 +40,8 @@ const TimeBox = ({ time, und }: iTimeBox) => {
 
   return (
     <Container>
-      <Heading name={`${time}`} color={colors.primary.highlight.purple} fontSize='108px' font='Sono' />
-      <Text name={und.toUpperCase()} color={colors.secondary.highlight.gray} fontSize='24px' font='Sono' />
+      <Heading name={`${time}`} color={colors.highlight.purple} fontSize='108px' font='Sono' />
+      <Text name={und.toUpperCase()} color={colors.highlight.gray} fontSize='24px' font='Sono' />
     </Container>
   )
 }

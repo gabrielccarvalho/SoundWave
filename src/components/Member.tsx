@@ -37,7 +37,7 @@ const Member = ({ name, image, role }: iMember) => {
         style={{ borderRadius: '50%' }}
       />
       <Heading name={name} fontSize='28px' />
-      <Text name={role} fontSize='22px' font='Sono' color={colors.secondary.highlight.green} />
+      <Text name={role} fontSize='22px' font='Sono' color={colors.highlight.green} />
     </Container>
   )
 }

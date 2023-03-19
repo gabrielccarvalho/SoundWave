@@ -53,7 +53,7 @@ const Podcasts = ({ podcastList }: iPodcasts) => {
             name="We currently don't support any podcast"
             fontSize='24px'
             font='Sono'
-            color={colors.primary.highlight.orange}
+            color={colors.highlight.orange}
             style={{ paddingTop: '5rem' }}
           />
 

@@ -9,6 +9,7 @@ interface iInput {
   label: string
   placeholder: string
   submit?: string
+  type?: 'email' | 'text' | 'password'
 }
 
 const Container = styled.div`
@@ -27,10 +28,10 @@ const Container = styled.div`
   }
 `
 
-const InputField = styled.input`
+const InputField = styled.input<{ inputType: string }>`
   width: 20rem;
   height: 3rem;
-  border: 1px solid ${colors.primary.highlight.orange};
+  border: ${props => props.inputType === 'email' || 'password' ? `3px solid ${colors.highlight.lightBlue}` : `1px solid ${colors.highlight.orange}`};
   background-color: ${colors.primary.background};
   color: ${colors.primary.text};
   border-radius: 0.5rem;
@@ -41,24 +42,26 @@ const InputField = styled.input`
 
 `
 
-const Input = ({ label, placeholder, submit }: iInput) => {
+const Input = ({ label, placeholder, submit, type = 'text' }: iInput) => {
   const [value, setValue] = React.useState('')
   return (
     <Container>
       <Text name={label} fontSize='22px' />
       <InputField
-        type='text'
+        type={type}
         id='text'
+        inputType={type}
         placeholder={placeholder}
         value={value}
         onChange={e => setValue(e.currentTarget.value)}
+        style={type === 'email' || 'password' ? { marginTop: '0' } : { marginTop: '1.5rem'}}
       />
       {submit && (
         <Button
           name={submit}
           link={`mailto:contact@soundwave.com.br?subject=Podcast suggestion&body=${value}`}
           color={colors.primary.background}
-          bgColor={colors.primary.highlight.orange}
+          bgColor={colors.highlight.orange}
         />
       )}
     </Container>

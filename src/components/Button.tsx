@@ -39,7 +39,7 @@ const Component = styled.button<{bgColor: string, btnType?: string}>`
   }
 `
 
-const Button = ({ name, onClick, link, color = colors.primary.highlight.blue, bgColor = colors.primary.text, type = 'action', icon, size = 22, style }: iButton) => {
+const Button = ({ name, onClick, link, color = colors.highlight.blue, bgColor = colors.primary.text, type = 'action', icon, size = 22, style }: iButton) => {
   return (
     <>
       {link ? (

@@ -14,8 +14,8 @@ const About = () => {
       />
       <Navbar />
       <Jumbotron
-        primaryColor={colors.primary.highlight.red}
-        secondaryColor={colors.primary.highlight.orange}
+        primaryColor={colors.highlight.red}
+        secondaryColor={colors.highlight.orange}
         title='Podcasts'
         subtitle='Here are all podcasts we support right now.'
         />

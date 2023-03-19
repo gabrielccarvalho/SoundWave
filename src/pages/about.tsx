@@ -14,8 +14,8 @@ const About = () => {
       />
       <Navbar />
       <Jumbotron
-        primaryColor={colors.secondary.highlight.blue}
-        secondaryColor={colors.secondary.highlight.green}
+        primaryColor={colors.highlight.lightBlue}
+        secondaryColor={colors.highlight.green}
         title='Who we are'
         subtitle='Know more about SoundWave and our mission'
       />
