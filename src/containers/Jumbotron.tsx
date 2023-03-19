@@ -119,7 +119,7 @@ const Jumbotron = ({ primaryColor, secondaryColor, title, subtitle, extraSubtitl
         (<CTA>
           <Button
             name={cta}
-            redirect={redirect}
+            link={redirect}
           />
         </CTA>)}
       </MainContainer>
