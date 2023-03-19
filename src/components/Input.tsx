@@ -56,7 +56,7 @@ const Input = ({ label, placeholder, submit }: iInput) => {
       {submit && (
         <Button
           name={submit}
-          redirect={`mailto:contact@soundwave.com.br?subject=Podcast suggestion&body=${value}`}
+          link={`mailto:contact@soundwave.com.br?subject=Podcast suggestion&body=${value}`}
           color={colors.primary.background}
           bgColor={colors.primary.highlight.orange}
         />
