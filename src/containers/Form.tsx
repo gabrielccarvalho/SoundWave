@@ -132,16 +132,16 @@ const Form = ({}: iForm) => {
           style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           onSubmit={handleSubmit}
         >
-          <Input label='Email' placeholder='email@email.com' type='email' value={email} setValue={setEmail} />
-          <Input label='Password' placeholder='*******' type='password' value={password} setValue={setPassword} />
+          <Input label='Email' placeholder='' type='email' value={email} setValue={setEmail} />
+          <Input label='Password' placeholder='' type='password' value={password} setValue={setPassword} />
           <Button
             name='Login'
+            btnType='submit'
             type='submit'
             style={{
               marginTop: '4rem',
               borderRadius: '0.5rem',
               width: '100%',
-              border: `2px solid ${colors.highlight.lightBlue}`,
             }}
             color={colors.primary.text}
             bgColor={colors.primary.background}

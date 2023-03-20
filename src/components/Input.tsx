@@ -33,14 +33,22 @@ const Container = styled.div`
 const InputField = styled.input<{ inputType: string }>`
   width: 20rem;
   height: 3rem;
-  border: ${props => (props.inputType === 'email') || (props.inputType === 'password') ? `3px solid ${colors.highlight.lightBlue}` : `1px solid ${colors.highlight.orange}`};
   background-color: ${colors.primary.background};
+  border: ${props => (props.inputType === 'email') || (props.inputType === 'password') ? `3px solid ${colors.primary.background}` : `1px solid ${colors.primary.text}`};
   color: ${colors.primary.text};
   border-radius: 0.5rem;
   padding: 0 1rem;
   font-size: 1rem;
   box-sizing: border-box;
   outline: none;
+
+  :hover {
+    border: ${props => (props.inputType === 'email') || (props.inputType === 'password') ? `3px solid ${colors.highlight.lightBlue}` : `1px solid ${colors.highlight.orange}`};
+  }
+  
+  :focus {
+    border: ${props => (props.inputType === 'email') || (props.inputType === 'password') ? `3px solid ${colors.highlight.lightBlue}` : `1px solid ${colors.highlight.orange}`};
+  }
 
 `
 

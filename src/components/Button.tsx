@@ -11,7 +11,7 @@ interface iButton {
   link?: string
   color?: string
   bgColor?: string
-  btnType?: 'login' | 'action' | 'redirect' | 'navbar'
+  btnType?: 'login' | 'action' | 'submit' | 'redirect' | 'navbar'
   icon?: string
   size?: number
   style?: React.CSSProperties
@@ -20,7 +20,7 @@ interface iButton {
 
 const Component = styled.button<{bgColor: string, btnType?: string, color?: string}>`
   background-color: ${props => props.bgColor};
-  border: ${props => props.btnType === 'login' || props.btnType === 'navbar' ? 'none' : `1px solid ${colors.primary.background}`};
+  border: ${props => props.btnType === 'login' || props.btnType === 'navbar' ? 'none' : `3px solid ${colors.primary.background}`};
   border-radius: ${props => props.btnType === 'login' ? '0' : '50px'};
   padding: ${props => props.btnType === 'login' ? '0 1rem' : '0.2rem 1rem'};
   display: flex;
@@ -35,11 +35,11 @@ const Component = styled.button<{bgColor: string, btnType?: string, color?: stri
   }
 
   :hover {
-    background-color : ${props => props.btnType === 'navbar' ? 'inherit' : props.color};
-    border: 2px solid ${props => props.btnType === 'navbar' ? 'inherit' : props.bgColor};
+    background-color : ${props => props.btnType === 'navbar' ? 'inherit' : (props.btnType === 'submit' ? colors.primary.background : props.color)};
+    border: 3px solid ${props => props.btnType === 'navbar' ? 'inherit' : props.btnType === 'submit' ? colors.highlight.lightBlue : props.bgColor};
 
     p {
-      color: ${props => props.btnType === 'navbar' ? colors.secondary.text : props.bgColor};
+      color: ${props => props.btnType === 'navbar' ? colors.secondary.text : props.btnType === 'submit' ? colors.primary.text : props.bgColor};
     }
   }
 `
