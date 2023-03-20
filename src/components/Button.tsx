@@ -11,13 +11,14 @@ interface iButton {
   link?: string
   color?: string
   bgColor?: string
-  type?: 'login' | 'action' | 'redirect'
+  btnType?: 'login' | 'action' | 'redirect' | 'navbar'
   icon?: string
   size?: number
   style?: React.CSSProperties
+  type?: 'button' | 'submit' | 'reset'
 }
 
-const Component = styled.button<{bgColor: string, btnType?: string}>`
+const Component = styled.button<{bgColor: string, btnType?: string, color?: string}>`
   background-color: ${props => props.bgColor};
   border: ${props => props.btnType === 'login' ? 'none' : `1px solid ${colors.primary.background}`};
   border-radius: ${props => props.btnType === 'login' ? '0' : '50px'};
@@ -34,26 +35,30 @@ const Component = styled.button<{bgColor: string, btnType?: string}>`
   }
 
   :hover {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
+    background-color : ${props => props.btnType === 'navbar' ? 'inherit' : props.color};
+    border: 2px solid ${props => props.btnType === 'navbar' ? 'inherit' : props.bgColor};
+
+    p {
+      color: ${props => props.btnType === 'navbar' ? colors.secondary.text : props.bgColor};
+    }
   }
 `
 
-const Button = ({ name, onClick, link, color = colors.highlight.blue, bgColor = colors.primary.text, type = 'action', icon, size = 22, style }: iButton) => {
+const Button = ({ name, onClick, link, color = colors.highlight.blue, bgColor = colors.primary.text, btnType = 'action', icon, size = 22, style, type = 'button' }: iButton) => {
   return (
     <>
       {link ? (
         <a href={link} target='_blank'>
-          <Component onClick={onClick} bgColor={bgColor} style={style}>
+          <Component onClick={onClick} bgColor={bgColor} btnType={btnType} style={style} color={color} type={type}>
             {icon ? <Image src={icon} alt={name} width={size} height={size} /> : <Text name={name} color={color} fontSize='16px' />}
           </Component>
         </a>
-      ) : type === 'login' ? (
-        <Component onClick={onClick} bgColor={bgColor} btnType={type} style={style}>
+      ) : btnType === 'login' ? (
+        <Component onClick={onClick} bgColor={bgColor} btnType={btnType} style={style} color={color} type={type}>
           {icon ? <Image src={icon} alt={name} width={size} height={size} /> : <Text name={name} color={color} fontSize='16px' />}
         </Component>
       ) : (
-        <Component onClick={onClick} bgColor={bgColor} style={style}>
+        <Component onClick={onClick} bgColor={bgColor} btnType={btnType} style={style} color={color} type={type}>
           {icon ? <Image src={icon} alt={name} width={size} height={size} /> : <Text name={name} color={color} fontSize='16px' />}
         </Component>
       )}

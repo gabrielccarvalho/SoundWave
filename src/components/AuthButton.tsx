@@ -1,11 +1,11 @@
 import React from 'react'
-import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 import styled from "styled-components";
 
 import { colors } from '@/utils/baseStyles';
 import Button from './Button';
 import { Text } from './Heading';
+import { useRouter } from 'next/router';
 
 const Container = styled.div`
   display: flex;
@@ -55,43 +55,43 @@ const Wrapper = styled.div`
 `
 
 const AuthBtn = () => {
-  const { data: session, status } = useSession();
+  const router = useRouter()
 
-  if (status === "unauthenticated") {
+  if (true) {
     return (
       <div>
-        <Button name='Login' onClick={() => signIn()} type='login' color={colors.primary.text} bgColor='transparent' />
+        <Button name='Login' onClick={() => {router.push('/auth/signin')}} btnType='navbar' color={colors.primary.text} bgColor='transparent' />
       </div>
     );
   }
 
-  return (
-    <>
-      <Wrapper>
-        {session && session.user && session.user.image && session.user.name && 
-        (<Container>
-          <Row>
-            <Image src={session.user.image} alt={session.user.name} width={30} height={30} style={{ borderRadius: '50%' }} />
-            <Text name={session.user.name} color={colors.primary.text} fontSize='16px' />
-            <ButtonWrapper>
-              <Button
-                name='logout'
-                icon='/icons/logout.svg'
-                onClick={() => signOut()}
-                type='login'
-                color={colors.highlight.red}
-                bgColor='transparent'
-                style={{
-                  borderRadius: "0.5rem",
-                  padding: '2px',
-                }}
-              />
-            </ButtonWrapper>
-          </Row>
-        </Container>)}
-      </Wrapper>
-    </>
-  );
+  // return (
+  //   <>
+  //     <Wrapper>
+  //       {session && session.user && session.user.image && session.user.name && 
+  //       (<Container>
+  //         <Row>
+  //           <Image src={session.user.image} alt={session.user.name} width={30} height={30} style={{ borderRadius: '50%' }} />
+  //           <Text name={session.user.name} color={colors.primary.text} fontSize='16px' />
+  //           <ButtonWrapper>
+  //             <Button
+  //               name='logout'
+  //               icon='/icons/logout.svg'
+  //               onClick={() => signOut()}
+  //               type='login'
+  //               color={colors.highlight.red}
+  //               bgColor='transparent'
+  //               style={{
+  //                 borderRadius: "0.5rem",
+  //                 padding: '2px',
+  //               }}
+  //             />
+  //           </ButtonWrapper>
+  //         </Row>
+  //       </Container>)}
+  //     </Wrapper>
+  //   </>
+  // );
 };
 
 export default AuthBtn;

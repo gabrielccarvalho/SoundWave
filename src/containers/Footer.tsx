@@ -81,9 +81,14 @@ const PolicyContainer = styled.div`
   }
 `
 
+const Wrapper = styled.div`
+  z-index: 999;
+  background-color: ${colors.primary.background};
+`
+
 const Footer = () => {
   return (
-    <>
+    <Wrapper>
       <Divider />
       <Container>
         <Col>
@@ -110,7 +115,7 @@ const Footer = () => {
         </Col>
         <Text name='Copyright © 2023 SoundWave. All rights reserved.' color={colors.secondary.text} fontSize='14px' font='Sono' />
       </PolicyContainer>
-    </>
+    </Wrapper>
   )
 }
 

@@ -43,6 +43,7 @@ const Wrapper = styled.div`
 `
 
 const Podcasts = ({ podcastList }: iPodcasts) => {
+  const [value, setValue] = React.useState<string>('')
   return (
     <Container>
       <Heading name='Podcasts' fontSize='45px' />
@@ -60,7 +61,7 @@ const Podcasts = ({ podcastList }: iPodcasts) => {
           <Wrapper>
             <Text name="Didn't your podcast here?" fontSize='22px' color={colors.primary.text} />
             {/* <Text name='Send us your podcast suggestion!' fontSize='22px' color={colors.primary.text} style={{ marginBottom: '5rem' }} /> */}
-            <Input placeholder='Channel url' label='Send us your suggestion!' submit='Send request' />
+            <Input placeholder='Channel url' label='Send us your suggestion!' submit='Send request' value={value} setValue={setValue} />
           </Wrapper>
         </>
       )}

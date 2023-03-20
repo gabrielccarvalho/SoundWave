@@ -21,6 +21,9 @@ interface iHeading {
   bold?: boolean
   font?: 'Sono' | 'Poppins'
   style?: React.CSSProperties
+  specialWord?: string
+  redirect?: string
+  target?: '_blank' | '_self' | '_parent' | '_top'
 }
 
 const Component = styled.h1<{ fontSize: string, color: string, lineHeight: string, bold: boolean }>`
@@ -52,7 +55,7 @@ const Heading = ({ name, fontSize = '28px', color = colors.primary.text, lineHei
   )
 }
 
-const Text = ({ name, fontSize = '12px', color = colors.primary.text, lineHeight = '12px', bold = false, font='Poppins', style }: iHeading) => {
+const Text = ({ name, fontSize = '12px', color = colors.primary.text, lineHeight = '12px', bold = false, font='Poppins', style, specialWord, redirect, target = '_blank' }: iHeading) => {
   return (
     <TextComponent
       fontSize={fontSize}
@@ -63,6 +66,8 @@ const Text = ({ name, fontSize = '12px', color = colors.primary.text, lineHeight
       style={style}
     >
       {name}
+      {specialWord && <> </>}
+      {specialWord && redirect && (<a href={redirect} target={target} style={{ textDecoration: 'underline', color }}>{specialWord}</a>)}
     </TextComponent>
   )
 }
