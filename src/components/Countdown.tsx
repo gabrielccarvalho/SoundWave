@@ -24,7 +24,7 @@ const Countdown = () => {
   const [minutes, setMinutes] = React.useState(0);
   const [seconds, setSeconds] = React.useState(0);
 
-  const deadline = "June, 31, 2023";
+  const deadline = "May, 5, 2023";
 
   const getTime = (deadline: string) => {
     const time = Date.parse(deadline) - Date.now();

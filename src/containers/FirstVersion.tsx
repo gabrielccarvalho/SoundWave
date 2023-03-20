@@ -47,7 +47,7 @@ const FirstVersion = () => {
       <Container id='showcase'>
         <TextWrapper>
           <Heading
-            name='Our first version is coming soon!'
+            name='Our first closed beta is coming soon!'
             fontSize='32px'
           />
           <Image src='/icons/conffeti.png' width={48} height={48} alt='conffeti' />
@@ -56,7 +56,19 @@ const FirstVersion = () => {
         <Text
           name='We are working hard to bring you the best experience possible.'
           fontSize='22px'
+          style={{
+            marginBottom: '0'
+          }}
         />
+        <Text
+          name='if you want to join us on the launch, fill the form'
+          specialWord='here'
+          redirect='https://forms.gle/fW7bGi9iCuowzvsN8'
+          fontSize='22px'
+          style={{
+            margin: '0'
+          }}
+          />
       </Container>
     </>
   )
