@@ -90,6 +90,7 @@ const Wrapper = styled.div`
 
   @media (max-width: 414px) {
     height: calc(100vh - 16rem);
+    margin-bottom: 4rem;
   }
 `
 

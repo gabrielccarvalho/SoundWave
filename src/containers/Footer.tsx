@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: ${colors.primary.background};
   align-items: flex-start;
   column-gap: 2rem;
   padding: 1rem 2rem;
@@ -81,16 +82,9 @@ const PolicyContainer = styled.div`
   }
 `
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: ${colors.primary.background};
-  margin-top: 5rem;
-`
-
 const Footer = () => {
   return (
-    <Wrapper>
+    <>
       <Divider />
       <Container>
         <Col>
@@ -117,7 +111,7 @@ const Footer = () => {
         </Col>
         <Text name='Copyright © 2023 SoundWave. All rights reserved.' color={colors.secondary.text} fontSize='14px' font='Sono' />
       </PolicyContainer>
-    </Wrapper>
+    </>
   )
 }
 
