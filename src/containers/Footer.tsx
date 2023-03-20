@@ -82,8 +82,10 @@ const PolicyContainer = styled.div`
 `
 
 const Wrapper = styled.div`
-  z-index: 999;
+  display: flex;
+  flex-direction: column;
   background-color: ${colors.primary.background};
+  margin-top: 5rem;
 `
 
 const Footer = () => {
