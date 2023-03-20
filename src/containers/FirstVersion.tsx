@@ -10,7 +10,6 @@ const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 10rem 2rem;
-  height: 50rem;
   box-sizing: border-box;
   row-gap: 4rem;
 

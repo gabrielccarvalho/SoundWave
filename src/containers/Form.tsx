@@ -13,7 +13,6 @@ const Background = styled.section<{primary: string, secondary: string}>`
   bottom: 10%;
   width: 150%;
   left: -25%;
-  height: 80rem;
 
   z-index: -1;
 
@@ -27,8 +26,6 @@ const Background = styled.section<{primary: string, secondary: string}>`
     bottom: 0;
     top: 0;
     left: 0;
-
-    height: calc(100vh + 3.2rem);
 
     -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 120%);
 
@@ -82,14 +79,12 @@ const MainContainer = styled.div`
 
 const Wrapper = styled.div`
   flex: 1;
-  height: calc(100vh - 40rem);
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
 
   @media (max-width: 414px) {
-    height: calc(100vh - 16rem);
     margin-bottom: 4rem;
   }
 `
@@ -99,13 +94,14 @@ const BetaWarning = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 0.5rem;
+  margin-bottom: 6rem;
 
   p {
     margin: 0.5rem;
   }
 
   @media (max-width: 414px) {
+
     p {
       font-size: 14px;
       line-height: 14px;
@@ -144,13 +140,15 @@ const Form = ({}: iForm) => {
               marginTop: '4rem',
               borderRadius: '0.5rem',
               width: '100%',
+              border: `2px solid ${colors.highlight.lightBlue}`,
             }}
-            color={colors.highlight.blue}
+            color={colors.primary.text}
+            bgColor={colors.primary.background}
           />
         </form>
       </MainContainer>
       <BetaWarning>
-        <Text name='We are going to open the closed beta soon!' fontSize='22px' font='Sono' />
+        <Text name='We are going to start the closed beta soon!' fontSize='22px' font='Sono' />
         <Text name='If you wish to participate, fill the form' specialWord='here' redirect='https://forms.gle/fW7bGi9iCuowzvsN8' fontSize='22px' font='Sono' />
       </BetaWarning>
       <Background primary={colors.highlight.lightBlue} secondary={colors.highlight.blue} />
