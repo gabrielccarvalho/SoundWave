@@ -19,7 +19,7 @@ const Container = styled.div`
   float: none !important;
 
   @media (max-width: 414px) {
-
+    margin-bottom: 8rem !important;
     p {
       font-size: 16px;
       line-height: 22px;
