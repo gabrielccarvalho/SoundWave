@@ -20,7 +20,7 @@ interface iButton {
 
 const Component = styled.button<{bgColor: string, btnType?: string, color?: string}>`
   background-color: ${props => props.bgColor};
-  border: ${props => props.btnType === 'login' ? 'none' : `1px solid ${colors.primary.background}`};
+  border: ${props => props.btnType === 'login' || props.btnType === 'navbar' ? 'none' : `1px solid ${colors.primary.background}`};
   border-radius: ${props => props.btnType === 'login' ? '0' : '50px'};
   padding: ${props => props.btnType === 'login' ? '0 1rem' : '0.2rem 1rem'};
   display: flex;
