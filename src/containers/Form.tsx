@@ -9,10 +9,11 @@ interface iForm {
 
 const Background = styled.section<{primary: string, secondary: string}>`
   position: absolute;
-  top: 0;
-  bottom: 10%;
-  width: 150%;
-  left: -25%;
+  top: 7rem;
+  width: 60%;
+  right: 20%;
+
+  height: 70rem;
 
   z-index: -1;
 
