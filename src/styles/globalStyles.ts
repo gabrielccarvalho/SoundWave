@@ -10,6 +10,11 @@ const GlobalStyle = createGlobalStyle`
     color: ${colors.primary.text};
     box-sizing: border-box;
 
+    background-image: url('/assets/noise.webp');
+    background-repeat: repeat;
+    background-color: ${colors.primary.background};
+    background-blend-mode: overlay;
+
     overflow-x: hidden;
 
     button, input {

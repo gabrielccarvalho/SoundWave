@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from "next/router";
 import Image from 'next/image'
 import styled from 'styled-components'
 
-import { Dropdown, Heading, SocialMedia, AuthButton } from '@/components'
+import { Dropdown, Heading, AuthButton } from '@/components'
 import { colors } from '@/utils/baseStyles'
 
 const Container = styled.div`
@@ -72,11 +73,12 @@ const Logo = styled.div`
 `
 
 const Navbar = () => {
+  const router = useRouter();
 
-  // const scrollSmoothlyToBottom = (id: string) => {
-  //   const element = document.getElementById(id)
-  //   element?.scrollIntoView({ behavior: 'smooth' })
-  // }
+  const scrollSmoothlyToBottom = (id: string) => {
+    const element = document.getElementById(id)
+    element?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <>
@@ -90,7 +92,15 @@ const Navbar = () => {
           </Link>
           {/* <Dropdown name='Showcase' onClick={() => scrollSmoothlyToBottom('showcase')} /> */}
           <Dropdown name='Podcasts' location='/podcasts' />
-          <Dropdown name='About' location='/about' />
+          <Dropdown name='About' onClick={() => {
+            if (router.pathname === '/') {
+              scrollSmoothlyToBottom('showcase')
+            } else {
+              router.push('/').then(() => {
+                scrollSmoothlyToBottom('showcase')
+              })
+            }
+          }} />
         </Section>
 
         <Section>

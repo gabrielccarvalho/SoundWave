@@ -89,10 +89,30 @@ const CTA = styled.div`
   }
 `
 
+const BackgroundWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+
+  ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30rem;
+    z-index: -1;
+    background-image: url('/assets/noise.webp');
+    background-repeat: repeat;
+    background-color: ${colors.primary.background};
+    background-blend-mode: overlay;
+  }
+`
+
 const Jumbotron = ({ primaryColor, secondaryColor, title, subtitle, extraSubtitle, cta, redirect }: iJumbotron) => {
 
   return (
-    <>
+    <BackgroundWrapper>
       <MainContainer>
         <Heading
           name={title}
@@ -124,7 +144,7 @@ const Jumbotron = ({ primaryColor, secondaryColor, title, subtitle, extraSubtitl
         </CTA>)}
       </MainContainer>
       <Background primary={primaryColor} secondary={secondaryColor} />
-    </>
+    </BackgroundWrapper>
   )
 }
 

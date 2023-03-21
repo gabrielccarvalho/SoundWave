@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Button, Heading, Text, Input } from '@/components'
+import { Heading, Text, Input } from '@/components'
 import { colors } from '@/utils/baseStyles'
 
 interface iPodcasts {
@@ -18,6 +18,8 @@ const Container = styled.div`
   @media (max-width: 414px) {
 
     padding: 8rem 0.5rem;
+    padding-top: 2rem;
+
     p {
       text-align: center;
       line-height: 1.5rem;
@@ -54,7 +56,7 @@ const Podcasts = ({ podcastList }: iPodcasts) => {
             name="We currently don't support any podcast"
             fontSize='24px'
             font='Sono'
-            color={colors.highlight.orange}
+            color={colors.highlight.lightBlue}
             style={{ paddingTop: '5rem' }}
           />
 

@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-
-import { Countdown, Heading, Text } from '@/components'
 import Image from 'next/image'
+
+import { Background, Countdown, Heading, Text } from '@/components'
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 10rem 2rem;
+  padding: 8rem 2rem;
   box-sizing: border-box;
   row-gap: 4rem;
 
@@ -18,7 +18,6 @@ const Container = styled.div`
   float: none !important;
 
   @media (max-width: 414px) {
-    margin-bottom: 8rem !important;
     p {
       font-size: 16px;
       line-height: 22px;
@@ -37,17 +36,21 @@ const TextWrapper = styled.div`
   @media (max-width: 414px) {
     flex-direction: column;
     text-align: center;
+
+    h1 {
+      font-size: 32px;
+    }
   }
 `
 
 const FirstVersion = () => {
   return (
-    <>
+    <Background>
       <Container id='showcase'>
         <TextWrapper>
           <Heading
             name='Our first closed beta is coming soon!'
-            fontSize='32px'
+            fontSize='48px'
           />
           <Image src='/icons/conffeti.png' width={48} height={48} alt='conffeti' />
         </TextWrapper>
@@ -69,7 +72,7 @@ const FirstVersion = () => {
           }}
           />
       </Container>
-    </>
+    </Background>
   )
 }
 

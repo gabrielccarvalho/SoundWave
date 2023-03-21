@@ -43,11 +43,11 @@ const InputField = styled.input<{ inputType: string }>`
   outline: none;
 
   :hover {
-    border: ${props => (props.inputType === 'email') || (props.inputType === 'password') ? `3px solid ${colors.highlight.lightBlue}` : `1px solid ${colors.highlight.orange}`};
+    border: ${props => (props.inputType === 'email') || (props.inputType === 'password') ? `3px solid ${colors.highlight.lightBlue}` : `1px solid ${colors.highlight.lightBlue}`};
   }
   
   :focus {
-    border: ${props => (props.inputType === 'email') || (props.inputType === 'password') ? `3px solid ${colors.highlight.lightBlue}` : `1px solid ${colors.highlight.orange}`};
+    border: ${props => (props.inputType === 'email') || (props.inputType === 'password') ? `3px solid ${colors.highlight.lightBlue}` : `1px solid ${colors.highlight.lightBlue}`};
   }
 
 `
@@ -69,8 +69,8 @@ const Input = ({ label, placeholder, submit, type = 'text', value, setValue }: i
         <Button
           name={submit}
           link={`mailto:contact@soundwave.com.br?subject=Podcast suggestion&body=${value}`}
-          color={colors.primary.background}
-          bgColor={colors.highlight.orange}
+          color={colors.primary.text}
+          bgColor={colors.highlight.lightBlue}
         />
       )}
     </Container>

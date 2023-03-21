@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SEO } from '@/components';
-import { Navbar, Footer, FirstVersion, Jumbotron } from '@/containers';
+import { Navbar, Footer, FirstVersion, Jumbotron, Team } from '@/containers';
 import { colors } from '@/utils/baseStyles'
 
 const Home = () => {
@@ -20,6 +20,7 @@ const Home = () => {
         subtitle='SoundWave is a powerful podcast search engine that helps you find the content you want without any effort.'
         />
       <FirstVersion />
+      <Team />
       <Footer />
     </>
   )
