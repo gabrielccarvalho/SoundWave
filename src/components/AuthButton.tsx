@@ -1,58 +1,56 @@
 import React from 'react'
-import Image from "next/image";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 import { colors } from '@/utils/baseStyles';
 import Button from './Button';
-import { Text } from './Heading';
 import { useRouter } from 'next/router';
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  column-gap: 1rem;
-  padding: 0 1rem;
-  border-radius: 0.5rem;
-  border-bottom-left-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
+// const Container = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+//   column-gap: 1rem;
+//   padding: 0 1rem;
+//   border-radius: 0.5rem;
+//   border-bottom-left-radius: 1.5rem;
+//   border-bottom-right-radius: 1.5rem;
 
-  @media (max-width: 414px) {
+//   @media (max-width: 414px) {
 
-    p {
-      display: none;
-    }
+//     p {
+//       display: none;
+//     }
 
-    img {
-      width: 24px;
-      height: 24px;
-    }
-  }
-`
+//     img {
+//       width: 24px;
+//       height: 24px;
+//     }
+//   }
+// `
 
-const ButtonWrapper = styled.div`
-  display: flex;
+// const ButtonWrapper = styled.div`
+//   display: flex;
 
-  @media (max-width: 414px) {
-    img {
-      width: 16px;
-      height: 16px;
-    }
-  }
-`
+//   @media (max-width: 414px) {
+//     img {
+//       width: 16px;
+//       height: 16px;
+//     }
+//   }
+// `
 
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  column-gap: 0.5rem;
-`
+// const Row = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+//   column-gap: 0.5rem;
+// `
 
-const Wrapper = styled.div`
-  display: flex;
-`
+// const Wrapper = styled.div`
+//   display: flex;
+// `
 
 const AuthBtn = () => {
   const router = useRouter()

@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import { colors } from '@/utils/baseStyles'
-
 
 export const Background = styled.div`
   :before {

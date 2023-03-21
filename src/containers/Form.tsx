@@ -4,9 +4,6 @@ import styled from 'styled-components'
 import { Heading, Text, Button, Input } from '@/components'
 import { colors } from '@/utils/baseStyles'
 
-interface iForm {
-}
-
 const Background = styled.section<{primary: string, secondary: string}>`
   position: absolute;
   top: 7rem;
@@ -112,11 +109,9 @@ const BetaWarning = styled.div`
   }
 `
 
-const Form = ({}: iForm) => {
+const Form = () => {
   const [email, setEmail] = React.useState('')
   const [password, setPassword] = React.useState('')
-
-  const handleSubmit = () => {}
 
   return (
     <Wrapper>
@@ -130,7 +125,7 @@ const Form = ({}: iForm) => {
         />
         <form
           style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
         >
           <Input label='Email' placeholder='' type='email' value={email} setValue={setEmail} />
           <Input label='Password' placeholder='' type='password' value={password} setValue={setPassword} />

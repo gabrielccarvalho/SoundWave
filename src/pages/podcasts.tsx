@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { SEO } from '@/components';
-import { Navbar, Footer, Jumbotron, Podcasts, Header } from '@/containers';
-import { colors } from '@/utils/baseStyles'
+import { Navbar, Footer, Podcasts, Header } from '@/containers';
 
 const About = () => {
   return (
@@ -13,11 +12,7 @@ const About = () => {
         image='assets/twitter_img.png'
       />
       <Navbar />
-      <Header
-        // primaryColor={colors.highlight.red}
-        // secondaryColor={colors.highlight.orange}
-        title='Explore your podcasts'
-        />
+      <Header title='Explore your podcasts' />
         <Podcasts />
       <Footer />
     </>
