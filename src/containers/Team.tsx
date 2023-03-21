@@ -47,6 +47,10 @@ const Section = styled.div`
       font-size: 42px;
     }
 
+    h1:nth-child(1) {
+      margin-bottom: inherit !important;
+    }
+
     p {
       margin-top: 1rem !important;
     }
@@ -78,15 +82,17 @@ const Team = () => {
           <Text
             name='SoundWave started with a simple idea:
             help people find the desired content without being
-            distracted or lost with so many and long videos and
-            clickbaits.'
+            distracted or get lost with so many and long videos and
+            clickbaits. Here you only need to type the content you
+            want and we will show you the best results for you.'
             fontSize='22px'
             lineHeight='30px'
             font='Sono'
             style={{
               maxWidth: '50rem',
+              textAlign: 'justify',
               letterSpacing: '0.1px',
-              marginTop: '5rem',
+              marginTop: '2rem',
             }}
           />
           </Section>
@@ -96,6 +102,7 @@ const Team = () => {
               fontSize='38px'
               color={colors.highlight.purple}
               font='Sono'
+              style={{ marginBottom: '3rem' }}
             />
             <Member
               name='Gabriel Campos'
