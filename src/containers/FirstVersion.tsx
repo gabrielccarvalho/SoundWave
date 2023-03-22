@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 
-import { Background, Countdown, Heading, Text } from '@/components'
+import { Countdown, Heading, Text } from '@/components'
 
 const Container = styled.div`
   display: flex;
@@ -45,7 +45,7 @@ const TextWrapper = styled.div`
 
 const FirstVersion = () => {
   return (
-    <Background>
+    <>
       <Container id='showcase'>
         <TextWrapper>
           <Heading
@@ -72,7 +72,7 @@ const FirstVersion = () => {
           }}
           />
       </Container>
-    </Background>
+    </>
   )
 }
 
