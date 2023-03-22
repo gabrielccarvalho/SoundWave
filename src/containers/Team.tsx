@@ -73,7 +73,7 @@ const Team = () => {
             help people find the desired content without being
             distracted or get lost with so many long videos and
             clickbaits. Here you only need to type the content you
-            want and we will show you the best results for you.'
+            want and we will show you the best results.'
             fontSize='22px'
             lineHeight='40px'
             style={{
