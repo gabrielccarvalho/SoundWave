@@ -71,7 +71,7 @@ const Team = () => {
           <Text
             name='SoundWave started with a simple idea:
             help people find the desired content without being
-            distracted or get lost with so many and long videos and
+            distracted or get lost with so many long videos and
             clickbaits. Here you only need to type the content you
             want and we will show you the best results for you.'
             fontSize='22px'
