@@ -91,7 +91,6 @@ const Navbar = () => {
             </Logo>
           </Link>
           {/* <Dropdown name='Showcase' onClick={() => scrollSmoothlyToBottom('showcase')} /> */}
-          <Dropdown name='Podcasts' location='/podcasts' />
           <Dropdown name='About' onClick={() => {
             if (router.pathname === '/') {
               scrollSmoothlyToBottom('about-section')
@@ -101,6 +100,7 @@ const Navbar = () => {
               })
             }
           }} />
+          <Dropdown name='Podcasts' location='/podcasts' />
         </Section>
 
         <Section>
