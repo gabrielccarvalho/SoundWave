@@ -17,7 +17,7 @@ const Container = styled.div`
   padding: 4rem;
   height: 8rem;
   width: 8rem;
-  background: hsla(0, 0%, 100%, 0.024);
+  background: rgba(100, 100, 150, 0.15);
   border-radius: 30px;
 
   @media (max-width: 414px) {

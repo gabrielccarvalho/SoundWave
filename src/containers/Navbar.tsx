@@ -94,10 +94,10 @@ const Navbar = () => {
           <Dropdown name='Podcasts' location='/podcasts' />
           <Dropdown name='About' onClick={() => {
             if (router.pathname === '/') {
-              scrollSmoothlyToBottom('showcase')
+              scrollSmoothlyToBottom('about-section')
             } else {
               router.push('/').then(() => {
-                scrollSmoothlyToBottom('showcase')
+                scrollSmoothlyToBottom('about-section')
               })
             }
           }} />

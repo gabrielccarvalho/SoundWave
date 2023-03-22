@@ -1,14 +1,12 @@
 import styled from 'styled-components'
 
-
-export const Background = styled.div`
+export const Background = styled.section`
   :before {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: 60rem;
+    height: 100%;
+    width: 100% !important;
     z-index: -1;
     opacity: 0.4;
     background-size: 20px 20px;
@@ -17,5 +15,9 @@ export const Background = styled.div`
     image-rendering: pixelated;
     -webkit-mask-image: linear-gradient(to bottom,transparent,60%,white,90%,transparent);
     mask-image: linear-gradient(to bottom,transparent,60%,white,90%,transparent);
+
+    @media (max-width: 414px) {
+      display: none;
+    }
   }
 `

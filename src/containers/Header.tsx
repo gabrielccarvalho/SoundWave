@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Background, Heading } from '@/components'
+import { Heading } from '@/components'
 import { colors } from '@/utils/baseStyles'
 
 interface iHeader {
@@ -29,18 +29,19 @@ const Container = styled.div`
 
 const NoisyBg = styled.section<{primary: string, secondary: string}>`
   position: absolute;
-  top: 5rem;
-  bottom: 10%;
-  width: 150%;
-  left: -25%;
+  top: 0;
+  width: 100%;
+  left: 0;
   height: 30rem;
 
   z-index: -1;
 
-  background: url('/assets/noise.webp') repeat, linear-gradient(83.21deg, ${props => props.primary} 0%, ${props => props.secondary} 100%);
+  background: url('/assets/noise.webp') repeat, linear-gradient(83.2deg, ${props => props.primary} 40%, ${props => props.secondary} 100%);
   background-blend-mode: overlay;
-  -webkit-mask-image: linear-gradient(to top, transparent 30%, ${colors.primary.background} 100%);
-  mask-image: linear-gradient(to top, transparent 30%, ${colors.primary.background} 100%);
+  /* -webkit-mask-image: linear-gradient(to top, transparent 30%, ${colors.primary.background} 100%);
+  mask-image: linear-gradient(to top, transparent 30%, ${colors.primary.background} 100%); */
+  -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 75%);
+  mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 75%);
 
   @media (max-width: 414px) {
     width: 100%;
@@ -57,7 +58,7 @@ const NoisyBg = styled.section<{primary: string, secondary: string}>`
 
 const Header = ({ title }: iHeader) => {
   return (
-    <Background>
+    <>
       <Container>
           <Heading
             name={title}
@@ -65,8 +66,8 @@ const Header = ({ title }: iHeader) => {
             style={{ maxWidth: '50rem', textAlign: 'center' }}
           />
         </Container>
-        <NoisyBg primary={colors.highlight.green} secondary={colors.highlight.blue} />
-    </Background>
+        <NoisyBg primary={colors.highlight.blue} secondary={colors.highlight.darkBlue} />
+    </>
   )
 }
 

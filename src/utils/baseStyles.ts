@@ -9,6 +9,7 @@ export const colors = {
   highlight: {
     blue: '#3245ff',
     lightBlue: '#0076BE',
+    darkBlue: '#000370',
     navy: '#0A192F',
     darkPurple: '#663399',
     purple: '#8973FD',

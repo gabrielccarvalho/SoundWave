@@ -57,21 +57,10 @@ const Section = styled.div`
   }
 `
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
 const Team = () => {
   return (
-    <Wrapper id='about-section'>
-      <Heading
-        name='About Us'
-        fontSize='58px'
-        font='Sono'
-      />
-      <Container>
+    <>
+      <Container id='about-section'>
         <Section>
           <Heading
             name='Project'
@@ -86,8 +75,7 @@ const Team = () => {
             clickbaits. Here you only need to type the content you
             want and we will show you the best results for you.'
             fontSize='22px'
-            lineHeight='30px'
-            font='Sono'
+            lineHeight='40px'
             style={{
               maxWidth: '50rem',
               textAlign: 'justify',
@@ -111,7 +99,7 @@ const Team = () => {
             />
           </Section>
       </Container>
-    </Wrapper>
+    </>
   )
 }
 
