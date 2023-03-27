@@ -62,11 +62,12 @@ const Header = ({ title }: iHeader) => {
       <Container>
           <Heading
             name={title}
-            fontSize='68px'
-            style={{ maxWidth: '50rem', textAlign: 'center' }}
+            fontSize='72px'
+            style={{ maxWidth: '50rem', textAlign: 'center', fontWeight: 'bold' }}
+            font='normal'
           />
         </Container>
-        <NoisyBg primary={colors.highlight.blue} secondary={colors.highlight.darkBlue} />
+        <NoisyBg primary={colors.highlight.blueText} secondary={colors.highlight.lightBlue} />
     </>
   )
 }

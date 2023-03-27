@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Image from 'next/image'
 import styled from 'styled-components'
 
-import { Dropdown, Heading, AuthButton } from '@/components'
+import { Dropdown, Heading, SocialMedia } from '@/components'
 import { colors } from '@/utils/baseStyles'
 
 const Container = styled.div`
@@ -104,8 +104,8 @@ const Navbar = () => {
         </Section>
 
         <Section>
-          {/* <SocialMedia size={28} /> */}
-          <AuthButton />
+          <SocialMedia size={24} />
+          {/* <AuthButton /> */}
         </Section>
       </Container>
       <Divider />

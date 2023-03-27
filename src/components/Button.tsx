@@ -44,7 +44,7 @@ const Component = styled.button<{bgColor: string, btnType?: string, color?: stri
   }
 `
 
-const Button = ({ name, onClick, link, color = colors.highlight.blue, bgColor = colors.primary.text, btnType = 'action', icon, size = 22, style, type = 'button' }: iButton) => {
+const Button = ({ name, onClick, link, color = colors.highlight.blueText, bgColor = colors.primary.text, btnType = 'action', icon, size = 22, style, type = 'button' }: iButton) => {
   return (
     <>
       {link ? (

@@ -19,7 +19,7 @@ interface iHeading {
   color?: string
   lineHeight?: string
   bold?: boolean
-  font?: 'Sono' | 'Poppins'
+  font?: 'Sono' | 'Poppins' | 'normal'
   style?: React.CSSProperties
   specialWord?: string
   redirect?: string
@@ -47,8 +47,8 @@ const Heading = ({ name, fontSize = '28px', color = colors.primary.text, lineHei
       color={color}
       lineHeight={lineHeight}
       bold={bold}
-      className={ font === 'Sono' ? sono.className : poppins.className }
-      style={style}
+      className={ font === 'Sono' ? sono.className : font === 'Poppins' ? poppins.className : 'unset'}
+      style={font === 'normal' ? { ...style, fontFamily: 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji' } : { ...style }}
     >
       {name}
     </Component>

@@ -66,7 +66,7 @@ const Team = () => {
             name='Project'
             fontSize='38px'
             font='Sono'
-            color={colors.highlight.purple}
+            color={colors.highlight.blueText}
           />
           <Text
             name='SoundWave started with a simple idea:
@@ -88,7 +88,7 @@ const Team = () => {
             <Heading
               name='Team'
               fontSize='38px'
-              color={colors.highlight.purple}
+              color={colors.highlight.blueText}
               font='Sono'
               style={{ marginBottom: '3rem' }}
             />

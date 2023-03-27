@@ -100,7 +100,7 @@ const Footer = () => {
             <Link name='Careers' href='' font='Sono' disabled />
           </Section>
         </Col>
-        <SocialMedia size={34}/>
+        <SocialMedia size={24}/>
       </Container>
       <Divider />
       <PolicyContainer>
