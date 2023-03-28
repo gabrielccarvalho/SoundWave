@@ -94,21 +94,30 @@ const CTA = styled.div`
   }
 `
 
+const SquigglyH1 = styled.h1`
+  display: 'block';
+  margin: '0 auto';
+  margin-bottom: '3rem';
+  margin-top: '5rem';
+  text-align: 'center';
+  font-feature-settings: "normal";
+
+  @media (max-width: 414px) {
+    font-size: 42px !important;
+    line-height: 42px !important;
+  }
+`
+
 const Jumbotron = ({ primaryColor, secondaryColor, title, subtitle, extraSubtitle, cta, redirect, squigglyLWord, squigglyRWord }: iJumbotron) => {
 
   return (
     <>
       <MainContainer>
         {(squigglyLWord && squigglyRWord) ?(
-          <h1 style={{
-            display: 'block',
-            margin: '0 auto',
-            marginBottom: '3rem',
-            textAlign: 'center',
+          <SquigglyH1 style={{
             fontSize: '72px',
-            marginTop: '10rem',
+            lineHeight: '72px',
             fontFamily: 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
-            fontFeatureSettings: "normal",
           }}>
           Search and find any video{" "}
           <span style={{
@@ -126,7 +135,7 @@ const Jumbotron = ({ primaryColor, secondaryColor, title, subtitle, extraSubtitl
             </span>
           </span>{" "}
           without effort.
-        </h1>
+        </SquigglyH1>
         ) : (
           <Heading
             name={title}
@@ -141,7 +150,6 @@ const Jumbotron = ({ primaryColor, secondaryColor, title, subtitle, extraSubtitl
           color={colors.primary.text}
           fontSize='24px'
           lineHeight='28px'
-          style={{ marginTop: '5rem' }}
         />
         {extraSubtitle && (
           <Text

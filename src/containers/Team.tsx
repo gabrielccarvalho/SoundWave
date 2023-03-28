@@ -14,7 +14,7 @@ const Container = styled.div`
   column-gap: 4rem;
 
   max-width: 1080px;
-  margin: 0 auto !important;
+  margin: 4rem auto !important;
   float: none !important;
 
   @media (max-width: 414px) {

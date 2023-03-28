@@ -13,7 +13,7 @@ const About = () => {
       />
       <Navbar />
       <Header title='Explore your podcasts' />
-        <Podcasts />
+      <Podcasts />
       <Footer />
     </>
   )

@@ -63,6 +63,7 @@ const Header = ({ title }: iHeader) => {
           <Heading
             name={title}
             fontSize='72px'
+            lineHeight='82px'
             style={{ maxWidth: '50rem', textAlign: 'center', fontWeight: 'bold' }}
             font='normal'
           />

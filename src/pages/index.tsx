@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SEO } from '@/components';
-import { Navbar, Footer, FirstVersion, Jumbotron, Team } from '@/containers';
+import { Navbar, Footer, FirstVersion, Jumbotron } from '@/containers';
 import { colors } from '@/utils/baseStyles'
 
 const Home = () => {
@@ -22,7 +22,6 @@ const Home = () => {
         squigglyRWord='in seconds.'
         />
       <FirstVersion />
-      <Team />
       <Footer />
     </>
   )
