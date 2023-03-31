@@ -1,3 +1,4 @@
+'use client'
 import { colors } from '@/utils/baseStyles'
 
 export default function SquigglyLines() {

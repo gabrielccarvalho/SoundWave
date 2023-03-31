@@ -1,9 +1,10 @@
+'use client'
 import React from 'react'
 import styled from 'styled-components'
-import { useRouter } from 'next/router'
 
 import { Text } from './Heading'
 import { colors } from '@/utils/baseStyles'
+import Link from 'next/link'
 
 interface iDropdownItem {
   name: string
@@ -33,19 +34,25 @@ const Container = styled.div`
 `
 
 const DropdownItem = ({ name, onClick, location }: iDropdownItem) => {
-  const router = useRouter()
 
-  const handleRedirect = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (location) {
-      e.preventDefault()
-      router.push(location)
-    } else {
-      onClick && onClick()
-    }
-  }
+  // const handleRedirect = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  //   if (location) {
+  //     e.preventDefault()
+  //     router.push(location)
+  //   } else {
+  //     onClick && onClick()
+  //   }
+  // }
+
   return (
-    <Container onClick={handleRedirect}>
-      <Text name={name} fontSize='16px' />
+    <Container onClick={() => !location && onClick && onClick()}>
+      {location ? (
+        <Link href={location}>
+          <Text name={name} fontSize='16px' />
+        </Link>
+      ) : (
+        <Text name={name} fontSize='16px' />
+      )}
     </Container>
   )
 }

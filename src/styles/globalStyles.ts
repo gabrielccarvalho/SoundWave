@@ -1,3 +1,4 @@
+'use client'
 import { createGlobalStyle } from 'styled-components'
 
 import { colors } from '@/utils/baseStyles'
@@ -10,7 +11,8 @@ const GlobalStyle = createGlobalStyle`
     color: ${colors.primary.text};
     box-sizing: border-box;
 
-    background: linear-gradient(180deg,hsla(0,0%,100%,.1) 0,hsla(0,0%,100%,0) 50%,hsla(0,0%,100%,0) 100%), #000;
+    background-color: #000000;
+    /* background: linear-gradient(180deg,hsla(0,0%,100%,.1) 0,hsla(0,0%,100%,0) 50%,hsla(0,0%,100%,0) 100%), #000; */
 
     overflow-x: hidden;
 

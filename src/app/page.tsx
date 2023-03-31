@@ -1,17 +1,16 @@
 import React from 'react';
 
-import { SEO } from '@/components';
 import { Navbar, Footer, FirstVersion, Jumbotron } from '@/containers';
 import { colors } from '@/utils/baseStyles'
+
+export const metadata = {
+  title: 'Welcome to the future | SoundWave',
+  description: 'Search smarter, not harder.',
+};
 
 const Home = () => {
   return (
     <>
-      <SEO
-        title='Welcome to the future'
-        description='Search smarter, not harder.'
-        image='assets/twitter_img.png'
-      />
       <Navbar />
       <Jumbotron
         primaryColor={colors.highlight.blueText}
