@@ -47,7 +47,7 @@ const TextWrapper = styled.div`
 const FirstVersion = () => {
   return (
     <>
-      <Container id='showcase'>
+      <Container>
         <TextWrapper>
           <Heading
             name='Our first closed beta is coming soon!'
