@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Navbar, Footer, Podcasts, Header } from '@/containers';
 
 export const metadata = {

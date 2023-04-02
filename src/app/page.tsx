@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { Navbar, Footer, FirstVersion, Jumbotron } from '@/containers';
+import { Navbar, Footer, FirstVersion, Jumbotron, UseCases } from '@/containers';
 import { colors } from '@/utils/baseStyles'
 
 export const metadata = {
@@ -21,6 +19,7 @@ const Home = () => {
         squigglyRWord='in seconds.'
         />
       <FirstVersion />
+      <UseCases />
       <Footer />
     </>
   )

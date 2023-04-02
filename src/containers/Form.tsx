@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 
 import { Heading, Text, Button, Input } from '@/components'
@@ -111,8 +111,8 @@ const BetaWarning = styled.div`
 `
 
 const Form = () => {
-  const [email, setEmail] = React.useState('')
-  const [password, setPassword] = React.useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   return (
     <Wrapper>

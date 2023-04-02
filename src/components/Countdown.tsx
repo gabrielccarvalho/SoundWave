@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import TimeBox from './TimeBox';
 
@@ -19,10 +19,10 @@ const Container = styled.div`
 
 
 const Countdown = () => {
-  const [days, setDays] = React.useState(0);
-  const [hours, setHours] = React.useState(0);
-  const [minutes, setMinutes] = React.useState(0);
-  const [seconds, setSeconds] = React.useState(0);
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
 
   const deadline = "May, 5, 2023";
 
@@ -35,7 +35,7 @@ const Countdown = () => {
     setSeconds(Math.floor((time / 1000) % 60));
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => getTime(deadline), 1000);
 
     return () => clearInterval(interval);

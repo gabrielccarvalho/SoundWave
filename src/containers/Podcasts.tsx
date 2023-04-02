@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 
 import { Heading, Text, Input } from '@/components'
@@ -46,7 +46,7 @@ const Wrapper = styled.div`
 `
 
 const Podcasts = ({ podcastList }: iPodcasts) => {
-  const [value, setValue] = React.useState<string>('')
+  const [value, setValue] = useState<string>('')
   return (
     <Container>
       <Heading name='Podcasts' fontSize='45px' />
