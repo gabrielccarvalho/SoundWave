@@ -69,8 +69,6 @@ body {
   mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 75%);
 
   @media (max-width: 568px) {
-    width: 100%;
-    height: 500px;
-    top: 100px;
+    display: none;
   }
 }
