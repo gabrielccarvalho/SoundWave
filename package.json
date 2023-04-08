@@ -1,6 +1,6 @@
 {
   "name": "sw-web",
-  "version": "0.1.0",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,11 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.17",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
     "autoprefixer": "10.4.14",
-    "eslint": "8.37.0",
     "eslint-config-next": "13.3.0",
     "next": "13.3.0",
     "postcss": "8.4.21",
@@ -21,5 +21,11 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "8.38.0",
+    "eslint-plugin-react": "^7.32.2"
   }
 }
