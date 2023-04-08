@@ -11,6 +11,7 @@ body {
 
   @media (max-width: 568px) {
     padding: 2rem;
+    overflow-x: hidden;
   }
 }
 
@@ -69,6 +70,8 @@ body {
   mask-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 75%);
 
   @media (max-width: 568px) {
-    display: none;
+    width: 100% !important;
+    height: 500px !important;
+    top: 100px !important;
   }
 }
