@@ -4,13 +4,13 @@ const Header = () => {
 	return (
 		<>
 			<div className='flex flex-col w-full items-center mb-36'>
-				<h1 className='mt-32 text-6xl text-center max-[568px]:text-4xl'>Pricing</h1>
+				<h1 className='mt-32 max-[568px]:mt-12 text-6xl text-center max-[568px]:text-4xl'>Pricing</h1>
 				<p className='mt-8 text-xl text-zinc-500 text-center max-w-3xl max-[568px]:text-lg'>Use SoundWave for free with a variety of features. Upgrade to enable unlimited searches, enhanced search options, and additional features.</p>
 
 				<div className='flex flex-row gap-8 mt-48 max-[568px]:flex-col max-[568px]:mt-12'>
-					<div className='flex flex-col w-1/3 max-[568px]:w-full border-2 border-gray-800 rounded-2xl px-8 py-16 items-center'>
-						<p className='text-lg'>Free</p>
-						<p className='text-2xl mt-4'>Free for everyone</p>
+					<div className='flex flex-col w-1/3 max-[568px]:w-[90%] max-[568px]:mx-auto max-[568px]:my-0 border-2 border-gray-800 rounded-2xl px-8 py-16 items-center'>
+						<p className='text-lg max-[568px]:text-sm'>Free</p>
+						<p className='text-2xl max-[568px]:text-md'>Free for everyone</p>
 
 						<hr className='border border-gray-800 opacity-80 w-full mt-32  rounded-full' />
 
@@ -63,9 +63,9 @@ const Header = () => {
 						</div>
 					</div>
 
-					<div className='flex flex-col w-1/3 max-[568px]:w-full border-2 border-indigo-900 bg-[rgba(255,255,255,0.06)] rounded-2xl px-8 py-16 items-center shadow-inner shadow-[rgba(255,255,255,0.4)]'>
-						<p className='text-lg'>Premium</p>
-						<p className='text-2xl mt-4 tracking-wider'>$5 per month</p>
+					<div className='flex flex-col w-1/3 max-[568px]:w-[90%] max-[568px]:mx-auto max-[568px]:my-0 border-2 border-indigo-900 bg-[rgba(255,255,255,0.06)] rounded-2xl px-8 py-16 items-center shadow-inner shadow-[rgba(255,255,255,0.4)]'>
+						<p className='text-lg max-[568px]:text-sm'>Premium</p>
+						<p className='text-2xl max-[568px]:text-md mt-4 tracking-wider'>$5 per month</p>
 
 						<span className='flex flex-row text-sm mt-14 gap-2 text-white border-2 p-1 rounded-full px-4 border-indigo-800'>
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
@@ -124,9 +124,9 @@ const Header = () => {
 							</button>
 						</div>
 					</div>
-					<div className='flex flex-col w-1/3 max-[568px]:w-full border-2 border-gray-800 rounded-2xl px-8 py-16 items-center'>
-						<p className='text-lg'>Business</p>
-						<p className='text-2xl mt-4 tracking-wider'>$15 per month</p>
+					<div className='flex flex-col w-1/3 max-[568px]:w-[90%] max-[568px]:mx-auto max-[568px]:my-0 border-2 border-gray-800 rounded-2xl px-8 py-16 items-center'>
+						<p className='text-lg max-[568px]:text-sm'>Business</p>
+						<p className='text-2xl max-[568px]:text-md mt-4 tracking-wider'>$15 per month</p>
 
 						<hr className='border border-gray-800 opacity-80 w-full mt-32 rounded-full' />
 
