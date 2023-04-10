@@ -4,7 +4,7 @@ const NewsLetter = () => {
 	return (
 		<>
 			<div className='flex flex-col w-full max-w-7xl mx-auto my-0 mt-6 items-center'>
-				<section className="my-32">
+				<section className="my-8">
 					<div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
 						<div className="mx-auto max-w-screen-md sm:text-center">
 							<h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white">Sign up for our newsletter</h2>
