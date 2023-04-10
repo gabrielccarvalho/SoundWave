@@ -1,4 +1,4 @@
-import { HHeader as Header, PFeatures as Features, PSupport as Support } from "@/containers"
+import { HHeader as Header, HSupport as Support, NewsLetter } from "@/containers"
 import { Navbar, Footer } from "@/components"
 
 const Home = () => {
@@ -6,8 +6,8 @@ const Home = () => {
 		<>
 			<Navbar />
 			<Header />
-			<Features />
 			<Support />
+			<NewsLetter />
 			<Footer />
 		</>
 	)

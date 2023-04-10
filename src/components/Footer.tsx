@@ -6,6 +6,7 @@ const Footer = () => {
 	return (
 		<>
 			<hr className='border border-zinc-400 opacity-5' />
+
 			<div className='flex flex-row max-w-7xl my-0 mx-auto py-12 gap-28 justify-between max-[568px]:justify-center max-[568px]:flex-col'>
 				<div className='flex flex-col gap-4 justify-between max-[568px]:flex-row max-[568px]:items-center'>
 					<Link href='/' className='group flex flex-row items-center'>
@@ -50,26 +51,26 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className='flex flex-row pb-12 max-[568px]:flex-wrap max-[568px]:items-start max-[568px]:text-center max-[568px]:gap-8 max-[568px]:justify-center'>
-					<div className='flex flex-col gap-4 ml-20 max-[568px]:ml-0'>
+					<div className='flex flex-col gap-4 ml-20 max-[568px]:ml-0 text-sm max-[568px]:text-md font-sans text-zinc-500 cursor-pointer'>
 						<p className='text-sm max-[568px]:text-md font-sans text-white'>Product</p>
 						<Link href='/pricing'>
-							<p className='text-sm max-[568px]:text-md font-sans text-zinc-500 cursor-pointer hover:text-white'>Pricing</p>
+							<p className='hover:text-white'>Pricing</p>
 						</Link>
 						<Link href='/'>
-							<p className='text-sm max-[568px]:text-md font-sans text-zinc-500 cursor-pointer hover:text-white'>Features</p>
+							<p className='hover:text-white'>Features</p>
 						</Link>
 					</div>
-					<div className='flex flex-col gap-4 ml-20 max-[568px]:ml-0'>
+					<div className='flex flex-col gap-4 ml-20 max-[568px]:ml-0 text-sm max-[568px]:text-md font-sans text-zinc-500 cursor-pointer'>
 						<p className='text-sm max-[568px]:text-md font-sans text-white'>Resources</p>
-						<p className='text-sm max-[568px]:text-md font-sans text-zinc-500 cursor-pointer hover:text-white'>Contact</p>
-						<p className='text-sm max-[568px]:text-md font-sans text-zinc-500 cursor-pointer hover:text-white'>Documentation</p>
+						<p className='hover:text-white'>Contact</p>
+						<p className='hover:text-white'>Documentation</p>
 					</div>
-					<div className='flex flex-col gap-4 ml-20 max-[568px]:ml-0'>
+					<div className='flex flex-col gap-4 ml-20 max-[568px]:ml-0 text-sm max-[568px]:text-md font-sans text-zinc-500 cursor-pointer'>
 						<p className='text-sm max-[568px]:text-md font-sans text-white'>Company</p>
-						<p className='text-sm max-[568px]:text-md font-sans text-zinc-500 cursor-pointer hover:text-white'>Careers</p>
-						<p className='text-sm max-[568px]:text-md font-sans text-zinc-500 cursor-pointer hover:text-white'>About us</p>
-						<p className='text-sm max-[568px]:text-md font-sans text-zinc-500 cursor-pointer hover:text-white'>Privacy Police</p>
-						<p className='text-sm max-[568px]:text-md font-sans text-zinc-500 cursor-pointer hover:text-white'>Terms of Service</p>
+						<p className='hover:text-white'>Careers</p>
+						<p className='hover:text-white'>About us</p>
+						<p className='hover:text-white'>Privacy Police</p>
+						<p className='hover:text-white'>Terms of Service</p>
 					</div>
 				</div>
 			</div>

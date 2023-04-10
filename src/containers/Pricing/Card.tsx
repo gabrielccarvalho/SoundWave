@@ -2,13 +2,13 @@
 
 const Card = () => {
 	return (
-		<div className='flex flex-row justify-between items-center max-w-4xl mx-auto border-indigo-800 border-2 rounded-3xl my-32'>
+		<div className='flex flex-row justify-between items-center max-w-4xl mx-auto rounded-3xl my-32'>
 			<div className='flex flex-row max-[568px]:flex-col max-[568px]:p-6 items-center justify-between border-animation-gradient w-full h-full py-20 px-16 rounded-3xl'>
 				<div className='flex flex-col'>
 					<div className='flex flex-row w-full items-center gap-2 p-0 m-0 max-[568px]:justify-center'>
 						<h2 className='text-2xl max-[568px]:text-md text-white'>SoundWave</h2><h2 className='text-2xl max-[568px]:text-md text-transparent bg-clip-text bg-gradient-to-t from-indigo-600 via-purple-400 to-pink-600"'>Business</h2>
 					</div>
-					<p className='text-gray-400 text-md font-sans max-w-sm mt-8 max-[568px]:text-center max-[568px]:text-justify'>Built for podcasts who want to easily create a Youtube channel with your cuts easier. <br /> SoundWave Business offers advanced features, powerful admin controls and more.</p>
+					<p className='text-gray-400 text-md font-sans max-w-sm mt-8 max-[568px]:text-center'>Built for podcasts who want to easily create a Youtube channel with your cuts easier. <br /> SoundWave Business offers advanced features, powerful admin controls and more.</p>
 				</div>
 				<div>
 					<button className='group flex flex-row max-[568px]:mt-8 max-[568px]:text-sm gap-2 items-center text-md font-sans bg-indigo-700 border border-indigo-700 text-white rounded-3xl px-5 py-3 transition ease-in-out delay-75 hover:shadow-[0_0_20px_5px_rgba(99,102,241,0.5)]'>

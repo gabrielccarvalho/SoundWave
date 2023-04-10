@@ -1,6 +1,4 @@
 "use client"
-
-import Image from "next/image"
 import Link from "next/link"
 
 const Header = () => {
@@ -17,7 +15,7 @@ const Header = () => {
 				</a>
 
 				<h1 className='inline mt-8 text-7xl max-[568px]:text-4xl max-w-3xl text-center'>Search your content effortless<span className='text-transparent bg-clip-text bg-gradient-to-t from-indigo-600 via-purple-400 to-pink-600"'> using AI</span></h1>
-				<p className='mt-8 text-xl max-[568px]:text-sm text-zinc-500 max-w-xl text-center'>Meet a new a powerful video search engine that will help you find your videos faster.</p>
+				<p className='mt-16 text-xl max-[568px]:text-sm text-zinc-500 max-w-xl text-center'>Meet a new a powerful video search engine that will help you find your videos faster.</p>
 
 				<Link href='/pricing'>
 					<button
@@ -50,15 +48,15 @@ const Header = () => {
 					</button>
 				</Link>
 
-				<div className='border-animation-gradient mt-36 max-[568px]:hidden'>
+				{/* <div className='border-animation-gradient mt-36 max-[568px]:hidden'>
 					<Image
 						src='/safari.webp'
 						alt='App Image'
 						width={ 1300 }
 						height={ 1300 }
-						className='rounded-3xl p-1 opacity-50'
+						className='rounded-3xl p-0.5'
 					/>
-				</div>
+				</div> */}
 
 				<div className='noise-bg'></div>
 			</div>

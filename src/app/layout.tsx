@@ -1,8 +1,8 @@
 import "../styles/globals.css"
 
-import { Source_Sans_Pro } from "next/font/google"
+import { Inter } from "next/font/google"
 
-const source = Source_Sans_Pro({
+const inter = Inter({
 	subsets: ["latin"],
 	display: "swap",
 	weight: ["200", "300", "400", "600", "900"],
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 	return (
-		<html lang="en" className={source.className}>
+		<html lang="en" className={inter.className}>
 			<body>{children}</body>
 		</html>
 	)
