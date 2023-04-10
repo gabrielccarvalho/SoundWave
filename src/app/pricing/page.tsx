@@ -1,4 +1,4 @@
-import { PHeader as Header, PCard as Card, NewsLetter } from "@/containers"
+import { PHeader as Header, PCard as Card } from "@/containers"
 import { Navbar, Footer } from "@/components"
 
 const Pricing = () => {
@@ -7,7 +7,6 @@ const Pricing = () => {
 			<Navbar />
 			<Header />
 			<Card />
-			<NewsLetter />
 			<Footer />
 		</>
 	)
