@@ -15,7 +15,7 @@ const Header = () => {
 				</a>
 
 				<h1 className='inline mt-8 text-7xl max-[568px]:text-4xl max-w-3xl text-center'>Search your content effortless<span className='text-transparent bg-clip-text bg-gradient-to-t from-indigo-600 via-purple-400 to-pink-600"'> using AI</span></h1>
-				<p className='mt-16 text-xl max-[568px]:text-sm text-zinc-500 max-w-xl text-center'>Meet a new a powerful video search engine that will help you find your videos faster.</p>
+				<p className='mt-16 text-xl max-[568px]:text-sm text-zinc-500 max-w-xl text-center'>Meet a new a powerful video search engine that will help you find your videos and podcasts faster.</p>
 
 				<Link href='/pricing'>
 					<button

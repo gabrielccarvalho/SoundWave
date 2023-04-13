@@ -4,7 +4,7 @@ const Support = () => {
 	return (
 		<>
 			<div className='flex flex-col w-full max-w-7xl mx-auto my-24 mt-32 items-center max-[568px]:max-w-[568px] max-[568px]:mt-14 max-[568px]:my-8'>
-				<h2 className='text-2xl text-gray-500 max-[568px]:text-center max-[568px]:text-lg'>Find your videos across the most famous platforms</h2>
+				<h2 className='text-2xl text-gray-500 max-[568px]:text-center max-[568px]:text-lg'>Find your videos and podcasts across the most famous platforms</h2>
 				<div className='flex flex-row items-center py-6 mt-11 gap-14 max-[568px]:flex-wrap max-[568px]:gap-8 max-[568px]:items-center max-[568px]:justify-center max-[568px]:px-8'>
 					<a href="https://open.spotify.com/" target="_blank" className="flex justify-center items-center" rel="noreferrer">
 						<svg className="h-9 max-[568px]:h-7 text-gray-400 hover:text-[#1DB954]" viewBox="0 0 124 38" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

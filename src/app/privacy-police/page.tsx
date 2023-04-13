@@ -1,4 +1,4 @@
-import { HomeHeader as Header, HomeSupport as Support, NewsLetter } from "@/containers"
+import { PrivacyHeader as Header, Privacy, NewsLetter } from "@/containers"
 import { Navbar, Footer } from "@/components"
 
 const Home = () => {
@@ -6,10 +6,9 @@ const Home = () => {
 		<>
 			<Navbar />
 			<Header />
-			<Support />
 			<div className='relative pb-20 pt-16'>
 				<div className='bg-grid noise-underlay absolute inset-0 mt-32' />
-				<NewsLetter />
+				<Privacy />
 			</div>
 			<Footer />
 		</>

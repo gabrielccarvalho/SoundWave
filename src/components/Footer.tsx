@@ -69,9 +69,9 @@ const Footer = () => {
 						<p className='text-sm max-[568px]:text-md font-sans text-white'>Company</p>
 						<p className='hover:text-white'>Careers</p>
 						<p className='hover:text-white'>About us</p>
-						<a href="https://soundwaveai.notion.site/Privacy-Police-6df717db6b7c4fd68ef371d606990618" target="_blank" rel="noreferrer">
+						<Link href='/privacy-police'>
 							<p className='hover:text-white'>Privacy Police</p>
-						</a>
+						</Link>
 						<a href="https://soundwaveai.notion.site/SoundWave-Terms-of-Service-ad6e7afb586747a68ad336bf496eeffd" target="_blank"	rel="noreferrer">
 							<p className='hover:text-white'>Terms of Service</p>
 						</a>
