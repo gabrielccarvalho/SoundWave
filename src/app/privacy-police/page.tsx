@@ -1,4 +1,4 @@
-import { PrivacyHeader as Header, Privacy, NewsLetter } from "@/containers"
+import { PrivacyHeader as Header, Privacy } from "@/containers"
 import { Navbar, Footer } from "@/components"
 
 const Home = () => {
