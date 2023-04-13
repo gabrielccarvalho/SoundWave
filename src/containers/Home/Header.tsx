@@ -58,7 +58,7 @@ const Header = () => {
 					/>
 				</div> */}
 
-				<div className='noise-bg'></div>
+				<div className='noise-bg noise-underlay'></div>
 			</div>
 		</>
 	)

@@ -1,6 +1,13 @@
 /* eslint-disable no-undef */
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	images: {
+		remotePatterns: [
+			{
+				hostname: "*.googleusercontent.com",
+			},
+		],
+	},
 	experimental: {
 		appDir: true,
 	},

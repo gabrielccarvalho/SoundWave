@@ -4,8 +4,8 @@
 
 body {
   color: #fff;
-  background: rgb(0, 2, 18);
-  backdrop-filter: blur(2px);
+  background-color: rgb(23 25 30);
+  backdrop-filter: blur(10px);
   position: relative;
   overflow-x: hidden;
 
@@ -42,7 +42,7 @@ body {
 	top: 6px;
 	width: calc(100% - 12px);
 	height: calc(100% - 12px);
-	background: rgb(0, 2, 18);
+	background: rgb(23 25 30);
 	border-radius: 20px;
 }
 
@@ -54,15 +54,13 @@ body {
 
 .noise-bg {
   position: absolute;
-  top: 400px;
+  top: 50px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  width: 1500px;
-  height: 1200px;
-
-  z-index: -1;
+  width: 100%;
+  height: 900px;
 
   background: url('/noise.webp') repeat, linear-gradient(83.21deg, #3730a3 30%, #a21caf 100%);
   background-blend-mode: overlay;
@@ -74,4 +72,21 @@ body {
     height: 500px !important;
     top: 100px !important;
   }
+}
+
+.bg-grid {
+  background-size: 20px 20px;
+  background-image: linear-gradient(to right,#23262D 1px,transparent 1px),linear-gradient(to bottom,#23262D 1px,transparent 1px);
+  background-position: top center;
+  image-rendering: pixelated;
+  -webkit-mask-image: linear-gradient(to bottom,transparent,10%,white,90%,transparent);
+  mask-image: linear-gradient(to bottom,transparent,10%,white,90%,transparent);
+
+  @media (max-width: 568px) {
+    display: none;
+  }
+}
+
+.noise-underlay {
+  z-index: -30;
 }

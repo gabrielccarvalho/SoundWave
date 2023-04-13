@@ -63,7 +63,7 @@ const Header = () => {
 						</div>
 					</div>
 
-					<div className='flex flex-col w-1/3 max-[568px]:w-[90%] max-[568px]:mx-auto max-[568px]:my-0 border-2 border-indigo-900 bg-[rgba(255,255,255,0.06)] rounded-2xl px-8 py-16 items-center shadow-inner shadow-[rgba(255,255,255,0.4)]'>
+					<div className='flex flex-col w-1/3 max-[568px]:w-[90%] max-[568px]:mx-auto max-[568px]:my-0 border-2 border-indigo-900 bg-[rgba(255,255,255,0.05)] rounded-2xl px-8 py-16 items-center shadow-inner shadow-[rgba(255,255,255,0.4)]'>
 						<p className='text-lg max-[568px]:text-sm'>Premium</p>
 						<p className='text-2xl max-[568px]:text-md mt-4 tracking-wider'>$5 per month</p>
 
@@ -181,7 +181,7 @@ const Header = () => {
 					</div>
 				</div>
 			</div>
-			<div className='noise-bg' />
+			<div className='noise-bg noise-underlay' />
 		</>
 	)
 }

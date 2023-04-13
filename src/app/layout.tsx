@@ -1,6 +1,7 @@
 import "../styles/globals.css"
 
 import { Inter } from "next/font/google"
+import { NextAuthProvider } from "@/contexts"
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -13,14 +14,18 @@ export const metadata = {
 	description: "A video search engine built with AI that came to help you find your videos.",
 }
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: {
   children: React.ReactNode
 }) {
 	return (
 		<html lang="en" className={inter.className}>
-			<body>{children}</body>
+			<body>
+				<NextAuthProvider>
+					{children}
+				</NextAuthProvider>
+			</body>
 		</html>
 	)
 }

@@ -7,7 +7,10 @@ const Home = () => {
 			<Navbar />
 			<Header />
 			<Support />
-			<NewsLetter />
+			<div className='relative pb-20 pt-16'>
+				<div className='bg-grid noise-underlay absolute inset-0 mt-32' />
+				<NewsLetter />
+			</div>
 			<Footer />
 		</>
 	)
