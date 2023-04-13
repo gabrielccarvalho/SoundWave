@@ -1,6 +1,7 @@
 import NextAuth, { type NextAuthOptions } from "next-auth"
 // import CredentialsProvider from "next-auth/providers/credentials"
 import GoogleProvider from "next-auth/providers/google"
+import TwitterProvider from "next-auth/providers/twitter"
 
 export const authOptions: NextAuthOptions = {
 	secret: process.env.SECRET,
@@ -21,6 +22,10 @@ export const authOptions: NextAuthOptions = {
 				},
 			},
 		}),
+		TwitterProvider({
+			clientId: String(process.env.TWITTER_KEY),
+			clientSecret: String(process.env.TWITTER_SECRET)
+		})
 	],
 }
 
