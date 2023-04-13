@@ -6,6 +6,7 @@ export const authOptions: NextAuthOptions = {
 	secret: process.env.NEXT_AUTH_SECRET,
 	session: {
 		strategy: "jwt",
+		maxAge: 60 * 60 * 24 * 1, // 1 day
 	},
 	providers: [
 		GoogleProvider({
