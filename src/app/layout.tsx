@@ -1,6 +1,8 @@
 import "../styles/globals.css"
 
 import { Inter } from "next/font/google"
+import { Analytics } from "@vercel/analytics/react"
+
 import { NextAuthProvider } from "@/contexts"
 
 const inter = Inter({
@@ -24,6 +26,7 @@ export default async function RootLayout({
 			<body>
 				<NextAuthProvider>
 					{children}
+					<Analytics />
 				</NextAuthProvider>
 			</body>
 		</html>
