@@ -3,7 +3,7 @@ import NextAuth, { type NextAuthOptions } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 
 export const authOptions: NextAuthOptions = {
-	secret: process.env.NEXTAUTH_SECRET,
+	secret: process.env.SECRET,
 	session: {
 		strategy: "jwt",
 		maxAge: 60 * 60 * 24 * 1, // 1 day
@@ -16,25 +16,11 @@ export const authOptions: NextAuthOptions = {
 				params: {
 					prompt: "consent",
 					access_type: "offline",
-					response_type: "code"
-				}
-			}
+					response_type: "code",
+					include_granted_scopes: true,
+				},
+			},
 		}),
-		// CredentialsProvider({
-		// 	name: "Sign in",
-		// 	credentials: {
-		// 		email: {
-		// 			label: "Email",
-		// 			type: "email",
-		// 			placeholder: "example@example.com",
-		// 		},
-		// 		password: { label: "Password", type: "password" },
-		// 	},
-		// 	async authorize(credentials) {
-		// 		const user = { id: "1", name: "Admin", email: "admin@admin.com" }
-		// 		return user
-		// 	},
-		// }),
 	],
 }
 
