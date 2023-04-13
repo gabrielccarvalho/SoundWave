@@ -32,7 +32,7 @@ const Navbar = () => {
 					<div className='flex flex-row items-center gap-6'>
 						<button
 							className='text-md max-[568px]:hidden max-[568px]:py-12 font-sans bg-indigo-700 border border-indigo-700 text-white rounded-3xl px-4 py-0.5 transition ease-in-out delay-75 hover:shadow-[0_0_20px_5px_rgba(99,102,241,0.5)]'
-							onClick={() => signIn()}
+							onClick={() => signIn("google")}
 						>
 								Sign in
 						</button>
