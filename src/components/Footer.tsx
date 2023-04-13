@@ -69,10 +69,10 @@ const Footer = () => {
 						<p className='text-sm max-[568px]:text-md font-sans text-white'>Company</p>
 						<p className='hover:text-white'>Careers</p>
 						<p className='hover:text-white'>About us</p>
-						<Link href='/privacy-police#top'>
+						<Link href='/privacy-police#'>
 							<p className='hover:text-white'>Privacy Police</p>
 						</Link>
-						<Link href='/terms-of-service#top'>
+						<Link href='/terms-of-service#'>
 							<p className='hover:text-white'>Terms of Service</p>
 						</Link>
 					</div>
