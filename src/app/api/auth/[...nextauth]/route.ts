@@ -2,7 +2,7 @@ import NextAuth, { type NextAuthOptions } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 
 export const authOptions: NextAuthOptions = {
-	secret: process.env.SECRET,
+	secret: process.env.NEXTAUTH_SECRET,
 	session: {
 		strategy: "jwt",
 		maxAge: 60 * 60 * 24 * 1, // 1 day
