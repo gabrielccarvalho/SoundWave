@@ -6,7 +6,6 @@ import Image from "next/image"
 
 const Navbar = () => {
 	const { data: session } = useSession()
-	console.log(session?.user)
 
 	return (
 		<div className='sticky top-0 right-0 backdrop-blur-xl backdrop-brightness-200 bg-[rgba(23,25,30,0.85)] z-[999]'>
