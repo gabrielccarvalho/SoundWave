@@ -15,8 +15,9 @@ export const authOptions: NextAuthOptions = {
 			clientSecret: String(process.env.GOOGLE_SECRET),
 			authorization: {
 				params: {
+					redirect_uri: process.env.NEXTAUTH_URL + "/api/auth/callback/google",
 					prompt: "consent",
-					access_type: "online",
+					access_type: "offline",
 					response_type: "code",
 					include_granted_scopes: true,
 				},
