@@ -12,13 +12,13 @@ export const authOptions: NextAuthOptions = {
 		GoogleProvider({
 			clientId: String(process.env.GOOGLE_ID),
 			clientSecret: String(process.env.GOOGLE_SECRET),
-			authorization: {
-				params: {
-					prompt: "consent",
-					access_type: "offline",
-					response_type: "code",
-				},
-			},
+			// authorization: {
+			// 	params: {
+			// 		prompt: "consent",
+			// 		access_type: "offline",
+			// 		response_type: "code",
+			// 	},
+			// },
 		}),
 	],
 }
