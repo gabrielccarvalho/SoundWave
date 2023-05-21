@@ -3,9 +3,14 @@
 import Link from "next/link"
 import { useSession, signIn, signOut } from "next-auth/react"
 import Image from "next/image"
+import { useEffect } from "react"
 
 const Navbar = () => {
 	const { data: session } = useSession()
+
+	useEffect(() => {
+		console.log(process.env.NEXTAUTH_URL)
+	}, [])
 
 	return (
 		<div className='sticky top-0 right-0 backdrop-blur-xl backdrop-brightness-200 bg-[rgba(23,25,30,0.85)] z-[999]'>
