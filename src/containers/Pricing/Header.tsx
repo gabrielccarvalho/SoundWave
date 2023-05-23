@@ -5,7 +5,7 @@ const Header = () => {
 		<>
 			<div className='flex flex-col w-full items-center mb-36'>
 				<h1 className='mt-32 max-[568px]:mt-12 text-6xl text-center max-[568px]:text-4xl'>Pricing</h1>
-				<p className='mt-8 text-xl text-zinc-500 text-center max-w-3xl max-[568px]:text-lg'>Use SoundWave for free with a variety of features. Upgrade to enable unlimited searches, enhanced search options, and additional features.</p>
+				<p className='mt-8 text-xl text-zinc-300 text-center max-w-3xl max-[568px]:text-lg'>Use SoundWave for free with a variety of features. Upgrade to enable unlimited searches, enhanced search options, and additional features.</p>
 
 				<div className='flex flex-row gap-8 mt-48 max-[568px]:flex-col max-[568px]:mt-12'>
 					<div className='flex flex-col w-1/3 max-[568px]:w-[90%] max-[568px]:mx-auto max-[568px]:my-0 border-2 border-gray-800 rounded-2xl px-8 py-16 items-center'>

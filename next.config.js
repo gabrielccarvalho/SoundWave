@@ -18,12 +18,6 @@ const nextConfig = {
 		maxInactiveAge: 10 * 1000,
 		// number of pages that should be kept simultaneously without being disposed
 		pagesBufferLength: 1,
-		env: {
-			NEXTAUTH_URL: process.env.NEXTAUTH_URL,
-			GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
-			GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
-			SECRET: process.env.SECRET,
-		}
 	},
 }
 

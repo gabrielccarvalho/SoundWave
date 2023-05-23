@@ -3,13 +3,13 @@
 const NewsLetter = () => {
 	return (
 		<>
-			<div className='flex flex-col gap-12 items-center justify-center scroll-pt-10 pb-10'>
+			<div className='flex flex-col gap-12 items-center justify-center scroll-pt-10 pb-10 px-3'>
 				<h1 className='text-white text-5xl sm:text-4xl max-[568px]:text-4xl text-center'>Don&apos;t miss anything!</h1>
 				<p className='text-white text-xl max-[568px]:text-sm max-w-2xl text-center'>
 					Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.
 				</p>
 			</div>
-			<div className='flex flex-col w-full max-w-4xl mx-auto my-0 mt-6 items-cente bg-[rgb(35,38,45)] rounded-3xl border-[#23262D] border-2'>
+			<div className='flex flex-col w-full max-w-4xl mx-auto my-0 mt-6 items-cente bg-[rgb(35,38,45)] rounded-3xl border-[#23262D] border-2 px-3'>
 				<section className="my-8">
 					<div className="p-6 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
 						<div className="mx-auto max-w-screen-md sm:text-center">

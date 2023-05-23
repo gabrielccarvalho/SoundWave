@@ -4,7 +4,7 @@ import Link from "next/link"
 const Header = () => {
 	return (
 		<>
-			<div className='flex flex-col w-full items-center'>
+			<div className='flex flex-col w-full items-center px-3'>
 				<a href='https://forms.gle/nGbTG3wK2khauML78' target='_blank' rel="noreferrer">
 					<button className='group mt-28 max-[568px]:mt-12 max-[568px]:text-xs flex flex-row gap-2 text-sm py-2 px-4 rounded-full items-center bg-[rgba(99,102,241,0.15)] from-indigo-600 via-purple-400 to-pink-600 hover:bg-gradient-to-r border-[1px] border-indigo-900 text-white hover:text-bold'>
 						Subscribe for our closed beta
@@ -15,7 +15,7 @@ const Header = () => {
 				</a>
 
 				<h1 className='inline mt-8 text-7xl max-[568px]:text-4xl max-w-3xl text-center'>Search your content effortless<span className='text-transparent bg-clip-text bg-gradient-to-t from-indigo-600 via-purple-400 to-pink-600"'> using AI</span></h1>
-				<p className='mt-16 text-xl max-[568px]:text-sm text-zinc-500 max-w-xl text-center'>Meet a new a powerful video search engine that will help you find your videos and podcasts faster.</p>
+				<p className='mt-16 text-xl max-[568px]:text-sm text-zinc-300 max-w-xl text-center'>Meet a new a powerful video search engine that will help you find your videos and podcasts faster.</p>
 
 				<Link href='/pricing'>
 					<button
@@ -58,7 +58,8 @@ const Header = () => {
 					/>
 				</div> */}
 
-				<div className='noise-bg noise-underlay'></div>
+				{/* <div className='noise-bg noise-underlay'></div>
+				<div className='noise-bg-right noise-underlay'></div> */}
 			</div>
 		</>
 	)
